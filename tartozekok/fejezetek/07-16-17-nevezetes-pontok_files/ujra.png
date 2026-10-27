@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="hu"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:image" content="https://www.nkp.hu/img/facebook_share_img.png">
+  <title>Okostankönyv</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link href="/lib/font-awesome-5/css/fontawesome.min.css" rel="stylesheet">
+  <link href="/lib/font-awesome-5/css/regular.min.css" rel="stylesheet">
+  <link href="/lib/font-awesome-5/css/solid.min.css" rel="stylesheet">
+  <link href="/lib/font-awesome-5/css/brands.min.css" rel="stylesheet">
+  <link href="/lib/nkp-admin-icons/nkp-admin-icons.css" rel="stylesheet">
+  <link href="/lib/nkp-icons/nkp-icons.css" rel="stylesheet">
+  <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="/lib/zoomist/zoomist.css" rel="stylesheet">
+  <link href="/lib/foundation/foundation.css" rel="stylesheet">
+  <link id="mainCss" href="/css/nkp.css" rel="stylesheet">
+  <link href="/css/exercise-engine.css" rel="stylesheet">
+  <script>
+    var GOOGLE_TAG_MANAGER_ID = undefined;
+    var GOOGLE_TAG_MANAGER_CMP_ID = undefined;
+    
+    if (location.hostname ===  "okostankonyv.uat.nkp.uni-eszterhazy.hu") {
+      GOOGLE_TAG_MANAGER_ID = "GTM-KHJHTJW6";
+      GOOGLE_TAG_MANAGER_CMP_ID = "PsfschlruXX_-z";
+    }
+    if (location === "www.nkp.hu") {
+      // GOOGLE_TAG_MANAGER_ID = "GTM-TMS8W2RZ";
+      // GOOGLE_TAG_MANAGER_CMP_ID = "JREGnMcdrxn91q";
+    }
+
+    if (GOOGLE_TAG_MANAGER_ID && GOOGLE_TAG_MANAGER_CMP_ID) {
+      document.write(
+        `<script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="${GOOGLE_TAG_MANAGER_CMP_ID}" async></scr`+`ipt>
+          <!-- Google Tag Manager -->
+            <script type="text/plain" data-usercentrics="Google Tag Manager">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GOOGLE_TAG_MANAGER_ID}');</scr`+`ipt>
+          <!-- End Google Tag Manager -->   
+        `
+      );
+    }
+  </script>
+  
+<link href="/static/css/nkp.2f31482c.css" rel="stylesheet">
+</head>
+<body>
+<div id="dialog-root" style="position: fixed; z-index: 9900; /* Z_INDEX_DIALOG_ROOT */"></div>
+<div id="eke-app" class="eke-view-row eke-view-row-expanded" tabindex="-1"></div>
+
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/lightbox/js/lightbox.min.js"></script>
+<script src="/lib/zoomist/zoomist.umd.js"></script>
+<script src="/lib/jquery-ui/jquery-ui.min.js"></script> <!-- TODO only some exercise engines use this -->
+<script src="/lib/jquery-simulate/jquery.simulate.js"></script>
+
+
+<script src="/lib/foundation/foundation.min.js"></script>
+<script src="/lib/motion-ui/dist/motion-ui.min.js"></script>
+<script src="/lib/jquery.ui.touch-punch-with-patch.js"></script>
+<script src="/lib/tinymce/js/tinymce/tinymce.min.js"></script> <!-- TODO only the HTML editor uses this -->
+<script src="/lib/FitText/jquery.fittext.js"></script>
+<!-- <script type="text/javascript"
+src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+</script> -->
+
+<!-- TODO MathJax responsive patch -->
+<script type="text/javascript">
+
+  /* List of fixable exercises */
+  var MathJaxEXE = [
+    {
+      exeName: '.eke-filltable-dnd',
+      targetName: '.answer-div'
+    },
+    {
+      exeName: '.wm-dnd-item-to-area',
+      targetName: '.answer-item'
+    },
+    {
+      exeName: '.eke-pairing-drag-and-drop',
+      targetName: '.answer-div'
+    },
+    {
+      exeName: '.eke-quiz-series',
+      targetName: '.exe-quiz-question'
+    },
+    {
+      exeName: '.eke-quiz-series',
+      targetName: '.button'
+    }
+
+  ];
+
+</script>
+
+
+<script>
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'albumLabel': "%1 / %2 kép",
+    'zoomistEnable': true
+  });
+
+  MathJax = {
+    tex: {
+      inlineMath: [
+        ['$', '$'],
+        ["\\(", "\\)"]
+      ],
+      digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:,[0-9]*)?|,[0-9]+)/,
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+      processEnvironments: true,
+      /*
+       autoload: {
+       color: [],
+       colorv2: ['color']
+       },
+       */
+      packages: {'[+]': ['noerrors']}
+    },
+    options: {
+      menuOptions: {
+        settings: {
+          zoom: "DoubleClick",
+          speech: false,
+          braille: false
+        }
+      },
+      enableMenu: true,
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    asciimath: {
+      delimiters: [['\\$', '\\$']]
+    },
+    chtml: {
+      //scale: 0.85,
+      matchFontHeight: false,
+      merrorFont: 'OpenSansSemiBold',
+      unknownFamily: 'OpenSansSemiBold'
+    },
+    startup: {
+      ready() {
+        MathJax.startup.defaultReady();
+        let menu = MathJax.startup.document.menu.menu;
+        menu._items.forEach((item) => {
+          if (item._type != 'command') {
+            item.hidden = true;
+          }
+        });
+        menu._items.forEach((item) => {
+          switch(item._content) {
+            case 'About MathJax':
+              item._content = 'A MathJax-ról';
+              break;
+            case 'MathJax Help':
+              item._content = 'MathJax Segítség';
+              break;
+            default:
+                  // code block
+          }
+        });
+      }
+    }
+
+  }
+
+</script>
+
+<!-- script type="text/javascript" id="MathJax-script" async src="/lib/mathjax/3.2.2/es5/tex-chtml-full.js"></script -->
+
+<script type="text/javascript">
+  if (location.search.includes("mathjax=4")) {
+    document.write('<script type="text/javascript" id="MathJax-script-4" async src="/lib/mathjax-4/tex-chtml.js"><\/script>');
+  } else {
+    document.write('<script type="text/javascript" id="MathJax-script" async src="/lib/mathjax/es5/tex-chtml-full.js"><\/script>');
+  }
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="/static/js/nkp.2c909618.js"></script>
+</body></html>

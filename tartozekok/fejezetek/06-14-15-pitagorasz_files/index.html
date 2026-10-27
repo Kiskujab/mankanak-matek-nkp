@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0129)https://www.nkp.hu/tankonyv/matematika_9_nat2020_b/lo/2fejezet/nat2020_mat_09_04_041_pitagorasz_2_kviz_egy_kerdeses_TA/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./messageBox.css">
+        <link rel="stylesheet" type="text/css" href="./buttons.css">
+
+        <!-- Meta -->
+          
+        <meta http-equiv="Content-Language" content="hu">
+
+        <!-- JavaScript -->
+        <script src="./jquery-2.1.4.js"></script>
+        <script src="./jquery-ui.js"></script>
+        <script src="./buttons.js"></script>
+        <script src="./messageController.js"></script>
+        <script src="./init.js"></script>
+
+	</head>
+	<body style="font-size: 8.268px; pointer-events: none;">
+
+        <div id="resizeContainer" style="height: 405.294px; width: 689px;">
+
+        <div id="question">
+            Az alábbiak közül melyik számhármas pitagoraszi?
+        </div>
+        <div id="answer1" onclick="checkAnswer(this);" index="0" answertype="wrong" style="background: rgb(255, 255, 255);">33, 44, 88</div>
+        <div id="answer2" onclick="checkAnswer(this);" index="1" answertype="wrong" style="background: rgb(255, 255, 255);">6, 9, 10</div>
+        <div id="answer3" onclick="checkAnswer(this);" index="0" answertype="right" style="background: rgb(255, 255, 255);">30, 40, 50</div>
+    
+        <div id="score">
+            <span id="currentScore">0</span> / <span id="totalScore">10</span>
+        </div>
+
+        <div id="buttonContainer"><img class="button" src="./ujra.png" title="Újrakezdés" onclick="reset();" id="button_0"><img class="button" src="./helyes.png" title="Megoldás" onclick="showSolution();" id="button_1"><img class="button" src="./instrukcio.png" title="Feladatleírás" onclick="introduce();" id="button_2" style="pointer-events: auto;"></div>
+
+    <div id="messageBox" style="display: block;"><div id="menuBar" style="background: rgb(218, 218, 217);"><img id="close" src="./close.png" onclick="messageController.close()" style="pointer-events: auto;"><p id="messageTitle" style="color: rgb(51, 51, 51);">Feladatleírás</p></div><div id="messageContent" style="background: rgb(255, 255, 255);">Válaszolj 10 kérdésre helyesen! <br>Minden feladatnál csak egy jó válasz van.</div></div><div id="darkenLayer" style="display: block;"></div></div>
+
+    <script src="./resize.js"></script>
+    <script src="./main.js"></script>
+	
+
+</body></html>

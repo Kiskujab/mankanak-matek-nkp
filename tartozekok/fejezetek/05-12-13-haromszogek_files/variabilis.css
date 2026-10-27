@@ -1,0 +1,4679 @@
+@charset "UTF-8";
+:root {
+  --title-color: #ffffff;
+  --title-background-color: #535353;
+  --title-text-transform: none;
+  --title-border-color: #c7c7c7;
+  --title-border-radius: 0px 0px 0px 0px;
+  --title-border-width: 0px 0px 0px 0px;
+  --title-font-size: 25px;
+  --title-font-family: "OpenSans";
+  --title-height: 55px;
+  --title-padding: 10px;
+  --content-color: #000000;
+  --content-background-color: #c7c7c7;
+  --border-color: #c7c7c7;
+  --border-radius: 0px 0px 0px 0px;
+  --border-width: 0px 0px 0px 0px;
+  --margin: 0px;
+  --padding: 15px;
+  --section-icon-src: "";
+  --section-icon-display: none;
+  --section-icon-position: left;
+  --section-icon-height: 40px;
+  --section-icon-width: 40px;
+  --section-icon-margin: 0 10px;
+  --section-icon-background: #00000000;
+  --section-icon-background-border-radius: 50%;
+  --right-icon-src: "";
+  --right-link-color: #fff;
+  --right-icon-display: none;
+  --css: "";
+}
+
+body {
+  background-color: #ffffff;
+}
+
+#header h1 {
+  max-width: 900px;
+  color: #000000;
+}
+
+.top-bar-right {
+  color: #000000;
+}
+.top-bar-right .accordion-menu .is-accordion-submenu li > a.accordion-menu {
+  color: #143854;
+}
+.top-bar-right .accordion-menu .is-accordion-submenu li > a {
+  color: #000000;
+}
+.top-bar-right .accordion-menu .is-accordion-submenu > div > div > li[aria-expanded=false] > a:after,
+.top-bar-right .accordion-menu .is-accordion-submenu > div > div > li[aria-expanded=false] > a:before,
+.top-bar-right .accordion-menu .is-accordion-submenu > div > div > li[aria-expanded=true] > a:after,
+.top-bar-right .accordion-menu .is-accordion-submenu > div > div > li[aria-expanded=true] > a:before {
+  background-color: #fff;
+}
+
+.footer-navigation .book-title {
+  color: #000000;
+}
+
+table td,
+th {
+  border: 1px solid #878787;
+}
+
+.eke-booksearch {
+  display: flex;
+}
+
+.eke-booksearch__input {
+  flex: 1;
+  max-width: 100% !important;
+  width: 100%;
+  /*margin: 3px 1rem 3px 3px !important;*/
+  border: 2px solid gray;
+  border-radius: 1em;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.eke-booksearch__link {
+  padding-left: 2rem !important;
+  font-weight: normal !important;
+  background: transparent !important;
+}
+
+.eke-booksearch__link:hover {
+  background: transparent !important;
+}
+
+.eke-booksearch__item {
+  margin: 0;
+}
+
+.eke-booksearch + .eke-booksearch__item {
+  margin-top: 10px;
+}
+
+.eke-booksearch__item:hover {
+  background-color: #7eb7d7;
+}
+
+a.eke-booksearch__link {
+  padding: 10px 0px 10px 0px !important;
+  font-family: "Open Sans";
+  font-weight: bold !important;
+  border-top: 1px solid #fff;
+  margin: 0 10px;
+}
+
+.eke-booksearch__link:hover {
+  background-color: transparent;
+}
+
+.item.d1 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d1 .dot.full,
+.chapter-select .dots .d1 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_01 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_01 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_01 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_01 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_01 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_01 .title-bar-left .columns > .title a.next,
+.fejezet_01 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 .title-bar-left .columns > .title a.next:hover,
+.fejezet_01 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_01 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_01 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_01 figcaption::after,
+.fejezet_01 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_01 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_01 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_01 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_01 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_01 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+
+.item.d2 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d2 .dot.full,
+.chapter-select .dots .d2 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_02 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_02 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_02 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_02 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_02 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_02 .title-bar-left .columns > .title a.next,
+.fejezet_02 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 .title-bar-left .columns > .title a.next:hover,
+.fejezet_02 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_02 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_02 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_02 figcaption::after,
+.fejezet_02 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_02 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_02 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_02 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_02 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_02 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_02.png") center bottom no-repeat;
+}
+
+.item.d3 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d3 .dot.full,
+.chapter-select .dots .d3 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_03 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_03 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_03 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_03 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_03 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_03 .title-bar-left .columns > .title a.next,
+.fejezet_03 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 .title-bar-left .columns > .title a.next:hover,
+.fejezet_03 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_03 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_03 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_03 figcaption::after,
+.fejezet_03 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_03 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_03 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_03 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_03 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_03 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_03.png") center bottom no-repeat;
+}
+
+.item.d4 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d4 .dot.full,
+.chapter-select .dots .d4 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_04 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_04 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_04 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_04 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_04 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_04 .title-bar-left .columns > .title a.next,
+.fejezet_04 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 .title-bar-left .columns > .title a.next:hover,
+.fejezet_04 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_04 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_04 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_04 figcaption::after,
+.fejezet_04 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_04 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_04 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_04 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_04 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_04 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_04.png") center bottom no-repeat;
+}
+
+.item.d5 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d5 .dot.full,
+.chapter-select .dots .d5 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_05 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_05 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_05 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_05 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_05 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_05 .title-bar-left .columns > .title a.next,
+.fejezet_05 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 .title-bar-left .columns > .title a.next:hover,
+.fejezet_05 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_05 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_05 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_05 figcaption::after,
+.fejezet_05 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_05 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_05 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_05 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_05 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_05 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_05.png") center bottom no-repeat;
+}
+
+.item.d6 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d6 .dot.full,
+.chapter-select .dots .d6 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_06 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_06 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_06 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_06 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_06 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_06 .title-bar-left .columns > .title a.next,
+.fejezet_06 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 .title-bar-left .columns > .title a.next:hover,
+.fejezet_06 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_06 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_06 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_06 figcaption::after,
+.fejezet_06 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_06 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_06 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_06 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_06 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_06 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_06.png") center bottom no-repeat;
+}
+
+.item.d7 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d7 .dot.full,
+.chapter-select .dots .d7 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_07 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_07 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_07 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_07 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_07 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_07 .title-bar-left .columns > .title a.next,
+.fejezet_07 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 .title-bar-left .columns > .title a.next:hover,
+.fejezet_07 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_07 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_07 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_07 figcaption::after,
+.fejezet_07 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_07 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_07 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_07 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_07 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_07 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_07.png") center bottom no-repeat;
+}
+
+.item.d8 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d8 .dot.full,
+.chapter-select .dots .d8 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_08 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_08 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_08 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_08 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_08 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_08 .title-bar-left .columns > .title a.next,
+.fejezet_08 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 .title-bar-left .columns > .title a.next:hover,
+.fejezet_08 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_08 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_08 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_08 figcaption::after,
+.fejezet_08 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_08 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_08 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_08 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_08 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_08 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_08.png") center bottom no-repeat;
+}
+
+.item.d9 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d9 .dot.full,
+.chapter-select .dots .d9 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_09 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_09 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_09 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_09 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_09 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_09 .title-bar-left .columns > .title a.next,
+.fejezet_09 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 .title-bar-left .columns > .title a.next:hover,
+.fejezet_09 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_09 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_09 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_09 figcaption::after,
+.fejezet_09 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_09 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_09 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_09 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_09 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_09 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_09.png") center bottom no-repeat;
+}
+
+.item.d10 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d10 .dot.full,
+.chapter-select .dots .d10 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_10 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_10 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_10 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_10 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_10 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_10 .title-bar-left .columns > .title a.next,
+.fejezet_10 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 .title-bar-left .columns > .title a.next:hover,
+.fejezet_10 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_10 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_10 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_10 figcaption::after,
+.fejezet_10 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_10 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_10 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_10 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_10 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_10 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_10.png") center bottom no-repeat;
+}
+
+.item.d11 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d11 .dot.full,
+.chapter-select .dots .d11 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_11 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_11 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_11 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_11 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_11 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_11 .title-bar-left .columns > .title a.next,
+.fejezet_11 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 .title-bar-left .columns > .title a.next:hover,
+.fejezet_11 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_11 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_11 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_11 figcaption::after,
+.fejezet_11 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_11 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_11 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_11 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_11 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_11 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_11.png") center bottom no-repeat;
+}
+
+.item.d12 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d12 .dot.full,
+.chapter-select .dots .d12 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_12 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_12 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_12 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_12 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_12 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_12 .title-bar-left .columns > .title a.next,
+.fejezet_12 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 .title-bar-left .columns > .title a.next:hover,
+.fejezet_12 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_12 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_12 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_12 figcaption::after,
+.fejezet_12 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_12 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_12 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_12 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_12 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_12 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_12.png") center bottom no-repeat;
+}
+
+.item.d13 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d13 .dot.full,
+.chapter-select .dots .d13 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_13 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_13 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_13 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_13 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_13 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_13 .title-bar-left .columns > .title a.next,
+.fejezet_13 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 .title-bar-left .columns > .title a.next:hover,
+.fejezet_13 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_13 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_13 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_13 figcaption::after,
+.fejezet_13 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_13 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_13 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_13 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_13 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_13 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_13.png") center bottom no-repeat;
+}
+
+.item.d14 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d14 .dot.full,
+.chapter-select .dots .d14 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_14 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_14 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_14 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_14 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_14 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_14 .title-bar-left .columns > .title a.next,
+.fejezet_14 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 .title-bar-left .columns > .title a.next:hover,
+.fejezet_14 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_14 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_14 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_14 figcaption::after,
+.fejezet_14 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_14 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_14 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_14 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_14 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_14 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_14.png") center bottom no-repeat;
+}
+
+.item.d15 .dot.dot-menu {
+  color: var(--chapter-selector-color, #535353);
+  border-color: var(--chapter-selector-color, #535353);
+}
+
+.chapter-select .dots .d15 .dot.full,
+.chapter-select .dots .d15 .dot:hover {
+  background-color: var(--chapter-selector-color, #535353);
+}
+
+.book-menu-color-light {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.tartalomjegyzek .contents-list .fejezet_15 > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_15 > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_15 > ul > li > ul > li > a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.2) !important;
+}
+.tartalomjegyzek .contents-list .fejezet_15 > ul > li > ul > li > a:hover {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.1) !important;
+}
+
+.temakorok .chapter-list > li > .tile {
+  background-color: var(--menu-light-color, #c7c7c7) !important;
+}
+
+.fejezet_15 .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_15 .title-bar-left .columns > .title a.next,
+.fejezet_15 .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 .title-bar-left .columns > .title a.next:hover,
+.fejezet_15 .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.fejezet_15 section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_15 .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.fejezet_15 figcaption::after,
+.fejezet_15 table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.fejezet_15 .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_15 .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.fejezet_15 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+.fejezet_15 .eke-booksearch .eke-booksearch__input {
+  border: none;
+  /*background-color: $darker-chapter-1;*/
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.fejezet_15 .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_15.png") center bottom no-repeat;
+}
+
+.top-bar-right .accordion-menu .main-item > a {
+  color: #fff !important;
+}
+.top-bar-right .accordion-menu .main-item > a:before,
+.top-bar-right .accordion-menu .main-item > a:after {
+  background-color: #fff !important;
+}
+
+.tartalomjegyzek .contents-list .tartalomjegyzek a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+.tartalomjegyzek .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.tartalomjegyzek .title-bar-left .columns > .title a.next,
+.tartalomjegyzek .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek .title-bar-left .columns > .title a.next:hover,
+.tartalomjegyzek .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.tartalomjegyzek section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.tartalomjegyzek .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.tartalomjegyzek figcaption::after,
+.tartalomjegyzek table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.tartalomjegyzek .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.tartalomjegyzek .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.tartalomjegyzek .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+
+.eloszo .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.eloszo .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.eloszo .title-bar-left .columns > .title a.next,
+.eloszo .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.eloszo .title-bar-left .columns > .title a.next:hover,
+.eloszo .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.eloszo .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .eloszo .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .eloszo .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.eloszo .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.eloszo section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.eloszo .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.eloszo figcaption::after,
+.eloszo table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.eloszo .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.eloszo .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.eloszo .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+
+.tartalomjegyzek .contents-list .eloszo a {
+  background-color: rgba(var(--menu-dark-color, #8d8d8d), 0.3) !important;
+}
+
+.temakorok .eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+.temakorok .title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.temakorok .title-bar-left .columns > .title a.next,
+.temakorok .title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.temakorok .title-bar-left .columns > .title a.next:hover,
+.temakorok .title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+.temakorok .book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .temakorok .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .temakorok .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.temakorok .book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+.temakorok section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.temakorok .chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+.temakorok figcaption::after,
+.temakorok table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+.temakorok .footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+.temakorok .footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+.temakorok .footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+
+.footer-img {
+  height: 13vw;
+  background-size: contain !important;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .footer-img {
+    height: 25vw !important;
+  }
+}
+@media (max-width: 426px) {
+  .footer-img {
+    height: 30vw !important;
+  }
+}
+
+.title-bar .top-bar {
+  background-color: inherit;
+}
+
+.audio-container h3 {
+  color: #fff !important;
+}
+
+ol .italic-list-element::marker {
+  font-style: italic;
+}
+ol.list-style-line--vcenter li::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+ol.list-style-line--vspace li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.simple-modal {
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.modal-control.impresszum {
+  background-color: unset !important;
+  border-radius: 0 !important;
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
+section.sticky-after {
+  margin-bottom: 0;
+}
+section.sticky-after .callout {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+section.sticky-after .callout h3:only-child:not(.audio-title) {
+  margin: -75px -15px 0px -15px;
+}
+section.sticky-after .callout > :last-child:not(h3) {
+  margin-bottom: 1rem;
+}
+section.sticky-after.exercise .exe-wrapper {
+  margin-bottom: 0 !important;
+}
+section.sticky-after.exercise .exe-wrapper .exe-container-simple {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+section.sticky-after + section .callout-wrapper {
+  padding-top: 75px !important;
+}
+section.sticky-after + section .callout-wrapper .callout {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+section.sticky-after + section .callout-wrapper .callout .callout-title {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+section.sticky-after + section.exercise .exe-wrapper .exe-container-simple {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+section.sticky-after + section .wide-section .callout-wrapper {
+  padding-top: 0 !important;
+}
+section.sticky-after .wide-section {
+  margin-bottom: 0;
+}
+section.sticky-after .wide-section h3:only-child:not(.audio-title) {
+  margin: 0;
+}
+
+/* hivatkozott leckék */
+.book-lesson-links {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+.book-lesson-links ul::after {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.book-lesson-links ul li .lesson-link {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+
+.interactive-video-dialog .dialog__content figcaption::before {
+  display: none;
+}
+
+.callout:not(.lo) {
+  position: relative;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--content-color);
+  padding: 0;
+  margin: var(--margin);
+}
+.callout:not(.lo) > a[data-toggle] {
+  text-decoration: none;
+  color: var(--right-link-color);
+}
+.callout:not(.lo) > a[data-toggle] h3:not(.open) ~ .lenyilo-link {
+  pointer-events: none;
+}
+.callout:not(.lo) > a[data-toggle] h3:not(.open) ~ .lenyilo-link:before {
+  transform: none !important;
+}
+.callout:not(.lo) > a[data-toggle] h3.open ~ .lenyilo-link {
+  pointer-events: none;
+}
+.callout:not(.lo) > a[data-toggle] h3.open ~ .lenyilo-link:before {
+  transform: rotate(-180deg);
+}
+.callout:not(.lo) .section-header {
+  position: relative;
+}
+.callout:not(.lo) .section-header h3 {
+  margin-bottom: 0;
+  background-color: var(--title-background-color);
+  padding: 10px;
+  color: var(--title-color);
+  position: relative;
+  text-transform: var(--title-text-transform);
+  border-width: var(--title-border-width);
+  border-style: solid;
+  border-color: var(--title-border-color);
+  border-radius: var(--title-border-radius);
+  font-size: var(--title-font-size);
+  font-family: var(--title-font-family);
+  font-weight: normal;
+  min-height: var(--title-height);
+  padding: var(--title-padding);
+}
+.callout:not(.lo) .section-header h3:before {
+  content: "";
+  display: var(--section-icon-display);
+  float: var(--section-icon-position);
+  height: var(--section-icon-height);
+  width: var(--section-icon-width);
+  background-repeat: no-repeat;
+  background: var(--section-icon-src);
+  margin: var(--section-icon-margin);
+  background-size: cover;
+  background-color: var(--section-icon-background);
+  border-radius: var(--section-icon-background-border-radius);
+}
+.callout:not(.lo) .section-header h3:empty {
+  display: none;
+}
+.callout:not(.lo) a[data-toggle] h3:empty {
+  display: block;
+}
+.callout:not(.lo) .section-content {
+  background-color: var(--content-background-color);
+  padding: var(--padding);
+  border-width: var(--border-width);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
+  border-style: solid;
+}
+.callout:not(.lo) .section-content:empty {
+  display: none;
+  padding: 0;
+}
+.callout:not(.lo) .lenyilo-link {
+  font-size: 15px;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--right-link-color);
+}
+.callout:not(.lo) .lenyilo-link:before {
+  content: "";
+  display: var(--right-icon-display);
+  float: right;
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background: var(--right-icon-src);
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: transform 750ms;
+  background-size: cover;
+}
+.callout:not(.lo) .lenyilo-link.open:before {
+  transform: rotate(-180deg);
+}
+
+.ugropont.callout {
+  background-color: var(--content-background-color);
+  color: var(--content-color);
+  border-radius: var(--border-radius);
+  border-width: var(--border-width);
+  border-color: var(--border-color);
+  border-style: solid;
+  padding: 10px;
+}
+.ugropont.callout x-link {
+  display: none;
+}
+.ugropont.callout h3 {
+  margin-bottom: 0;
+  padding: 10px;
+  text-transform: var(--title-text-transform);
+  font-size: var(--title-font-size);
+}
+.ugropont.callout .ugras {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ugropont.callout .ugras:before {
+  content: "";
+  display: var(--right-icon-display);
+  float: right;
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background: var(--right-icon-src);
+  margin-right: 10px;
+  margin-left: 10px;
+  background-size: cover;
+}
+.ugropont > a {
+  text-decoration: none;
+  color: var(--content-color);
+}
+
+.wide-section {
+  padding: 0;
+  background-color: transparent;
+  color: var(--content-color);
+  overflow: hidden;
+  margin: var(--margin);
+}
+.wide-section:not(.callout) > a {
+  text-decoration: none;
+}
+.wide-section .content-container {
+  border-radius: var(--border-radius);
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: var(--border-color);
+  background-color: var(--content-background-color);
+}
+@media (max-width: 1024px) {
+  .wide-section .content-container .callout-wrapper {
+    padding-right: 0 !important;
+  }
+}
+.wide-section .section-header {
+  background-color: var(--title-background-color);
+  position: relative;
+  color: var(--title-color);
+  border: none;
+  border-radius: var(--title-border-radius);
+  border-width: var(--title-border-width);
+  border-color: var(--title-border-color);
+  border-style: solid;
+  min-height: var(--title-height);
+}
+.wide-section .section-header:before {
+  display: none;
+}
+.wide-section .section-header h3 {
+  text-transform: var(--title-text-transform);
+  font-family: var(--title-font-family);
+  font-weight: normal;
+  font-size: var(--title-font-size) !important;
+  padding: var(--title-padding);
+  margin-bottom: 0;
+  z-index: 1;
+  position: relative;
+  max-width: 1095px;
+  margin: 0 auto !important;
+  border: none;
+}
+@media (max-width: 1024px) {
+  .wide-section .section-header h3 {
+    padding-right: 0 !important;
+  }
+}
+.wide-section .section-header h3:before {
+  content: "";
+  display: var(--section-icon-display);
+  float: var(--section-icon-position);
+  height: var(--section-icon-height);
+  width: var(--section-icon-width);
+  background-repeat: no-repeat;
+  background: var(--section-icon-src);
+  margin: var(--section-icon-margin);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-color: var(--section-icon-background);
+  border-radius: var(--section-icon-background-border-radius);
+}
+.wide-section .section-header:empty {
+  display: none;
+}
+.wide-section .section-header .lenyilo-link {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(0, -50%);
+}
+@media (max-width: 1024px) {
+  .wide-section .section-header .lenyilo-link {
+    right: 50px;
+    left: unset;
+  }
+}
+.wide-section a[data-toggle] .section-header h3 {
+  padding-right: 476px;
+}
+@media (max-width: 1024px) {
+  .wide-section a[data-toggle] .section-header h3 {
+    padding-right: 105px;
+  }
+}
+.wide-section a[data-toggle] .section-header h3:not(.open) ~ .lenyilo-link:before {
+  transform: none;
+}
+.wide-section a[data-toggle] .section-header h3.open ~ .lenyilo-link:before {
+  transform: rotate(-180deg);
+}
+.wide-section .callout {
+  margin: 0;
+  overflow: unset;
+}
+.wide-section .callout > div[data-toggler] {
+  padding: var(--padding) !important;
+}
+.wide-section .callout .section-content {
+  border: none;
+}
+.wide-section .callout .section-content:empty {
+  display: none !important;
+}
+
+.keretes.callout {
+  background: #fff;
+}
+.keretes.callout h3 {
+  text-transform: var(--title-text-transform);
+  font-size: var(--title-font-size);
+}
+.keretes.callout .section-content {
+  background: #fff;
+  border-width: 15px;
+  border-color: var(--border-color);
+  border-top-width: 0;
+  border-style: solid;
+}
+
+.book-modal .callout {
+  background-color: var(--content-background-color);
+}
+.book-modal .callout .audio-div {
+  margin: 45px 45px 0 45px;
+}
+.book-modal .callout .section-header {
+  margin-bottom: 0;
+  background-color: var(--title-background-color);
+  color: var(--title-color);
+  position: relative;
+  text-transform: var(--title-text-transform);
+  border-width: var(--title-border-width);
+  border-style: solid;
+  border-color: var(--title-border-color);
+  border-radius: var(--title-border-radius);
+  font-size: var(--title-font-size);
+  font-family: var(--title-font-family);
+  font-weight: normal;
+  min-height: var(--title-height);
+  padding: var(--title-padding);
+}
+.book-modal .callout .section-header:before {
+  content: "";
+  display: var(--section-icon-display);
+  float: var(--section-icon-position);
+  height: var(--section-icon-height);
+  width: var(--section-icon-width);
+  background-repeat: no-repeat;
+  background: var(--section-icon-src);
+  margin: var(--section-icon-margin);
+  background-size: cover;
+  background-color: var(--section-icon-background);
+  border-radius: var(--section-icon-background-border-radius);
+}
+.book-modal .callout .section-header:empty {
+  display: none;
+}
+.book-modal .callout .section-content {
+  background-color: var(--content-background-color);
+}
+
+.breadtext h3 {
+  text-transform: none;
+  margin-bottom: 0.6rem;
+}
+.breadtext h3:empty {
+  display: none;
+}
+
+.sticky-after .breadtext {
+  margin-bottom: 0 !important;
+}
+.sticky-after .breadtext *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.eke-booksearch {
+  color: var(--menu-darker-color, #535353);
+}
+
+.title-bar {
+  background-color: var(--menu-dark-color, #8d8d8d);
+}
+
+.title-bar-left .columns > .title a.next,
+.title-bar-left .columns > .title a.prev {
+  color: var(--menu-darker-color, #535353);
+}
+.title-bar-left .columns > .title a.next:hover,
+.title-bar-left .columns > .title a.prev:hover {
+  background-color: var(--menu-darker-color, #535353);
+  color: #f6fff8;
+}
+
+.book-top .top-bar .top-bar-right .menu-bar > .menu-control {
+  background-color: var(--menu-darker-color, #535353);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu {
+  background-color: var(--menu-lighter-color, #dddddd);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li.is-active > a {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a.is-active, .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li > a:hover {
+  background-color: var(--menu-light-color, #c7c7c7);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:before, .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=false] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:before, .book-top .top-bar .top-bar-right .accordion-menu .is-accordion-submenu li[aria-expanded=true] > a:after {
+  background-color: var(--menu-darker-color, #535353);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > li > a, .book-top .top-bar .top-bar-right .accordion-menu .spymenu.is-accordion-submenu > div > div > li > a {
+  background-color: var(--menu-dark-color, #8d8d8d);
+  color: #fff;
+}
+.book-top .top-bar .top-bar-right .accordion-menu .nested.is-accordion-submenu li[aria-expanded=true] > a {
+  background: var(--menu-light-color, #c7c7c7);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .main-item {
+  background-color: var(--menu-darker-color, #535353);
+}
+.book-top .top-bar .top-bar-right .accordion-menu .main-item > a:hover {
+  background-color: var(--menu-darker-color, #535353);
+}
+
+section.book-content .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+
+.chapters .title-row .back-btn {
+  background: url("../img/app/01/vissza.svg") no-repeat 50% 50%;
+  transform: none;
+}
+
+figcaption::after,
+table caption::after {
+  background: url("../img/app/01/kepalairas.svg") no-repeat;
+}
+
+.footer-image {
+  border-color: var(--menu-dark-color, #8d8d8d);
+}
+
+.footer-navigation h2 {
+  color: var(--menu-dark-color, #8d8d8d);
+}
+
+.footer-img {
+  background: url("/api/media/style/variabilis/img/FOOTER/footer_01.png") center bottom no-repeat;
+}
+
+ol {
+  margin-left: 30px;
+}
+
+li > ol {
+  margin-left: 2.5rem;
+}
+
+ol[style="list-style-type: lower-alpha;"],
+ol.alpha,
+ol[style="list-style-type: lower-alpha;"].alpha,
+ol[type=a] {
+  counter-reset: list 0;
+}
+ol[style="list-style-type: lower-alpha;"] > li,
+ol.alpha > li,
+ol[style="list-style-type: lower-alpha;"].alpha > li,
+ol[type=a] > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[style="list-style-type: lower-alpha;"] > li:before,
+ol.alpha > li:before,
+ol[style="list-style-type: lower-alpha;"].alpha > li:before,
+ol[type=a] > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[type=A],
+ol[style="list-style-type: upper-alpha;"] {
+  counter-reset: list 0;
+}
+ol[type=A] > li,
+ol[style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[type=A] > li:before,
+ol[style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[style="list-style-type: upper-roman;"] {
+  counter-reset: list 0;
+}
+ol[style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="1"] {
+  counter-reset: list 0;
+}
+ol[start="1"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="1"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="1"][type=a], ol[start="1"][style="list-style-type: lower-alpha;"], ol[start="1"].alpha, ol[start="1"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 0;
+}
+ol[start="1"][type=a] > li, ol[start="1"][style="list-style-type: lower-alpha;"] > li, ol[start="1"].alpha > li, ol[start="1"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="1"][type=a] > li:before, ol[start="1"][style="list-style-type: lower-alpha;"] > li:before, ol[start="1"].alpha > li:before, ol[start="1"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="1"][type=A], ol[start="1"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 0;
+}
+ol[start="1"][type=A] > li, ol[start="1"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="1"][type=A] > li:before, ol[start="1"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="1"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 0;
+}
+ol[start="1"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="1"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="2"] {
+  counter-reset: list 1;
+}
+ol[start="2"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="2"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="2"][type=a], ol[start="2"][style="list-style-type: lower-alpha;"], ol[start="2"].alpha, ol[start="2"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 1;
+}
+ol[start="2"][type=a] > li, ol[start="2"][style="list-style-type: lower-alpha;"] > li, ol[start="2"].alpha > li, ol[start="2"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="2"][type=a] > li:before, ol[start="2"][style="list-style-type: lower-alpha;"] > li:before, ol[start="2"].alpha > li:before, ol[start="2"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="2"][type=A], ol[start="2"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 1;
+}
+ol[start="2"][type=A] > li, ol[start="2"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="2"][type=A] > li:before, ol[start="2"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="2"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 1;
+}
+ol[start="2"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="2"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="3"] {
+  counter-reset: list 2;
+}
+ol[start="3"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="3"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="3"][type=a], ol[start="3"][style="list-style-type: lower-alpha;"], ol[start="3"].alpha, ol[start="3"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 2;
+}
+ol[start="3"][type=a] > li, ol[start="3"][style="list-style-type: lower-alpha;"] > li, ol[start="3"].alpha > li, ol[start="3"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="3"][type=a] > li:before, ol[start="3"][style="list-style-type: lower-alpha;"] > li:before, ol[start="3"].alpha > li:before, ol[start="3"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="3"][type=A], ol[start="3"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 2;
+}
+ol[start="3"][type=A] > li, ol[start="3"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="3"][type=A] > li:before, ol[start="3"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="3"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 2;
+}
+ol[start="3"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="3"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="4"] {
+  counter-reset: list 3;
+}
+ol[start="4"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="4"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="4"][type=a], ol[start="4"][style="list-style-type: lower-alpha;"], ol[start="4"].alpha, ol[start="4"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 3;
+}
+ol[start="4"][type=a] > li, ol[start="4"][style="list-style-type: lower-alpha;"] > li, ol[start="4"].alpha > li, ol[start="4"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="4"][type=a] > li:before, ol[start="4"][style="list-style-type: lower-alpha;"] > li:before, ol[start="4"].alpha > li:before, ol[start="4"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="4"][type=A], ol[start="4"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 3;
+}
+ol[start="4"][type=A] > li, ol[start="4"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="4"][type=A] > li:before, ol[start="4"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="4"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 3;
+}
+ol[start="4"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="4"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="5"] {
+  counter-reset: list 4;
+}
+ol[start="5"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="5"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="5"][type=a], ol[start="5"][style="list-style-type: lower-alpha;"], ol[start="5"].alpha, ol[start="5"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 4;
+}
+ol[start="5"][type=a] > li, ol[start="5"][style="list-style-type: lower-alpha;"] > li, ol[start="5"].alpha > li, ol[start="5"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="5"][type=a] > li:before, ol[start="5"][style="list-style-type: lower-alpha;"] > li:before, ol[start="5"].alpha > li:before, ol[start="5"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="5"][type=A], ol[start="5"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 4;
+}
+ol[start="5"][type=A] > li, ol[start="5"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="5"][type=A] > li:before, ol[start="5"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="5"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 4;
+}
+ol[start="5"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="5"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="6"] {
+  counter-reset: list 5;
+}
+ol[start="6"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="6"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="6"][type=a], ol[start="6"][style="list-style-type: lower-alpha;"], ol[start="6"].alpha, ol[start="6"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 5;
+}
+ol[start="6"][type=a] > li, ol[start="6"][style="list-style-type: lower-alpha;"] > li, ol[start="6"].alpha > li, ol[start="6"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="6"][type=a] > li:before, ol[start="6"][style="list-style-type: lower-alpha;"] > li:before, ol[start="6"].alpha > li:before, ol[start="6"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="6"][type=A], ol[start="6"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 5;
+}
+ol[start="6"][type=A] > li, ol[start="6"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="6"][type=A] > li:before, ol[start="6"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="6"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 5;
+}
+ol[start="6"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="6"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="7"] {
+  counter-reset: list 6;
+}
+ol[start="7"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="7"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="7"][type=a], ol[start="7"][style="list-style-type: lower-alpha;"], ol[start="7"].alpha, ol[start="7"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 6;
+}
+ol[start="7"][type=a] > li, ol[start="7"][style="list-style-type: lower-alpha;"] > li, ol[start="7"].alpha > li, ol[start="7"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="7"][type=a] > li:before, ol[start="7"][style="list-style-type: lower-alpha;"] > li:before, ol[start="7"].alpha > li:before, ol[start="7"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="7"][type=A], ol[start="7"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 6;
+}
+ol[start="7"][type=A] > li, ol[start="7"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="7"][type=A] > li:before, ol[start="7"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="7"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 6;
+}
+ol[start="7"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="7"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="8"] {
+  counter-reset: list 7;
+}
+ol[start="8"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="8"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="8"][type=a], ol[start="8"][style="list-style-type: lower-alpha;"], ol[start="8"].alpha, ol[start="8"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 7;
+}
+ol[start="8"][type=a] > li, ol[start="8"][style="list-style-type: lower-alpha;"] > li, ol[start="8"].alpha > li, ol[start="8"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="8"][type=a] > li:before, ol[start="8"][style="list-style-type: lower-alpha;"] > li:before, ol[start="8"].alpha > li:before, ol[start="8"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="8"][type=A], ol[start="8"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 7;
+}
+ol[start="8"][type=A] > li, ol[start="8"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="8"][type=A] > li:before, ol[start="8"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="8"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 7;
+}
+ol[start="8"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="8"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="9"] {
+  counter-reset: list 8;
+}
+ol[start="9"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="9"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="9"][type=a], ol[start="9"][style="list-style-type: lower-alpha;"], ol[start="9"].alpha, ol[start="9"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 8;
+}
+ol[start="9"][type=a] > li, ol[start="9"][style="list-style-type: lower-alpha;"] > li, ol[start="9"].alpha > li, ol[start="9"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="9"][type=a] > li:before, ol[start="9"][style="list-style-type: lower-alpha;"] > li:before, ol[start="9"].alpha > li:before, ol[start="9"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="9"][type=A], ol[start="9"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 8;
+}
+ol[start="9"][type=A] > li, ol[start="9"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="9"][type=A] > li:before, ol[start="9"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="9"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 8;
+}
+ol[start="9"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="9"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="10"] {
+  counter-reset: list 9;
+}
+ol[start="10"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="10"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="10"][type=a], ol[start="10"][style="list-style-type: lower-alpha;"], ol[start="10"].alpha, ol[start="10"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 9;
+}
+ol[start="10"][type=a] > li, ol[start="10"][style="list-style-type: lower-alpha;"] > li, ol[start="10"].alpha > li, ol[start="10"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="10"][type=a] > li:before, ol[start="10"][style="list-style-type: lower-alpha;"] > li:before, ol[start="10"].alpha > li:before, ol[start="10"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="10"][type=A], ol[start="10"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 9;
+}
+ol[start="10"][type=A] > li, ol[start="10"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="10"][type=A] > li:before, ol[start="10"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="10"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 9;
+}
+ol[start="10"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="10"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="11"] {
+  counter-reset: list 10;
+}
+ol[start="11"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="11"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="11"][type=a], ol[start="11"][style="list-style-type: lower-alpha;"], ol[start="11"].alpha, ol[start="11"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 10;
+}
+ol[start="11"][type=a] > li, ol[start="11"][style="list-style-type: lower-alpha;"] > li, ol[start="11"].alpha > li, ol[start="11"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="11"][type=a] > li:before, ol[start="11"][style="list-style-type: lower-alpha;"] > li:before, ol[start="11"].alpha > li:before, ol[start="11"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="11"][type=A], ol[start="11"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 10;
+}
+ol[start="11"][type=A] > li, ol[start="11"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="11"][type=A] > li:before, ol[start="11"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="11"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 10;
+}
+ol[start="11"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="11"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="12"] {
+  counter-reset: list 11;
+}
+ol[start="12"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="12"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="12"][type=a], ol[start="12"][style="list-style-type: lower-alpha;"], ol[start="12"].alpha, ol[start="12"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 11;
+}
+ol[start="12"][type=a] > li, ol[start="12"][style="list-style-type: lower-alpha;"] > li, ol[start="12"].alpha > li, ol[start="12"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="12"][type=a] > li:before, ol[start="12"][style="list-style-type: lower-alpha;"] > li:before, ol[start="12"].alpha > li:before, ol[start="12"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="12"][type=A], ol[start="12"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 11;
+}
+ol[start="12"][type=A] > li, ol[start="12"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="12"][type=A] > li:before, ol[start="12"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="12"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 11;
+}
+ol[start="12"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="12"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="13"] {
+  counter-reset: list 12;
+}
+ol[start="13"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="13"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="13"][type=a], ol[start="13"][style="list-style-type: lower-alpha;"], ol[start="13"].alpha, ol[start="13"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 12;
+}
+ol[start="13"][type=a] > li, ol[start="13"][style="list-style-type: lower-alpha;"] > li, ol[start="13"].alpha > li, ol[start="13"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="13"][type=a] > li:before, ol[start="13"][style="list-style-type: lower-alpha;"] > li:before, ol[start="13"].alpha > li:before, ol[start="13"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="13"][type=A], ol[start="13"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 12;
+}
+ol[start="13"][type=A] > li, ol[start="13"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="13"][type=A] > li:before, ol[start="13"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="13"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 12;
+}
+ol[start="13"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="13"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="14"] {
+  counter-reset: list 13;
+}
+ol[start="14"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="14"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="14"][type=a], ol[start="14"][style="list-style-type: lower-alpha;"], ol[start="14"].alpha, ol[start="14"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 13;
+}
+ol[start="14"][type=a] > li, ol[start="14"][style="list-style-type: lower-alpha;"] > li, ol[start="14"].alpha > li, ol[start="14"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="14"][type=a] > li:before, ol[start="14"][style="list-style-type: lower-alpha;"] > li:before, ol[start="14"].alpha > li:before, ol[start="14"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="14"][type=A], ol[start="14"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 13;
+}
+ol[start="14"][type=A] > li, ol[start="14"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="14"][type=A] > li:before, ol[start="14"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="14"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 13;
+}
+ol[start="14"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="14"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="15"] {
+  counter-reset: list 14;
+}
+ol[start="15"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="15"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="15"][type=a], ol[start="15"][style="list-style-type: lower-alpha;"], ol[start="15"].alpha, ol[start="15"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 14;
+}
+ol[start="15"][type=a] > li, ol[start="15"][style="list-style-type: lower-alpha;"] > li, ol[start="15"].alpha > li, ol[start="15"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="15"][type=a] > li:before, ol[start="15"][style="list-style-type: lower-alpha;"] > li:before, ol[start="15"].alpha > li:before, ol[start="15"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="15"][type=A], ol[start="15"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 14;
+}
+ol[start="15"][type=A] > li, ol[start="15"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="15"][type=A] > li:before, ol[start="15"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="15"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 14;
+}
+ol[start="15"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="15"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="16"] {
+  counter-reset: list 15;
+}
+ol[start="16"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="16"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="16"][type=a], ol[start="16"][style="list-style-type: lower-alpha;"], ol[start="16"].alpha, ol[start="16"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 15;
+}
+ol[start="16"][type=a] > li, ol[start="16"][style="list-style-type: lower-alpha;"] > li, ol[start="16"].alpha > li, ol[start="16"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="16"][type=a] > li:before, ol[start="16"][style="list-style-type: lower-alpha;"] > li:before, ol[start="16"].alpha > li:before, ol[start="16"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="16"][type=A], ol[start="16"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 15;
+}
+ol[start="16"][type=A] > li, ol[start="16"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="16"][type=A] > li:before, ol[start="16"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="16"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 15;
+}
+ol[start="16"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="16"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="17"] {
+  counter-reset: list 16;
+}
+ol[start="17"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="17"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="17"][type=a], ol[start="17"][style="list-style-type: lower-alpha;"], ol[start="17"].alpha, ol[start="17"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 16;
+}
+ol[start="17"][type=a] > li, ol[start="17"][style="list-style-type: lower-alpha;"] > li, ol[start="17"].alpha > li, ol[start="17"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="17"][type=a] > li:before, ol[start="17"][style="list-style-type: lower-alpha;"] > li:before, ol[start="17"].alpha > li:before, ol[start="17"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="17"][type=A], ol[start="17"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 16;
+}
+ol[start="17"][type=A] > li, ol[start="17"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="17"][type=A] > li:before, ol[start="17"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="17"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 16;
+}
+ol[start="17"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="17"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="18"] {
+  counter-reset: list 17;
+}
+ol[start="18"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="18"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="18"][type=a], ol[start="18"][style="list-style-type: lower-alpha;"], ol[start="18"].alpha, ol[start="18"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 17;
+}
+ol[start="18"][type=a] > li, ol[start="18"][style="list-style-type: lower-alpha;"] > li, ol[start="18"].alpha > li, ol[start="18"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="18"][type=a] > li:before, ol[start="18"][style="list-style-type: lower-alpha;"] > li:before, ol[start="18"].alpha > li:before, ol[start="18"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="18"][type=A], ol[start="18"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 17;
+}
+ol[start="18"][type=A] > li, ol[start="18"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="18"][type=A] > li:before, ol[start="18"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="18"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 17;
+}
+ol[start="18"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="18"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="19"] {
+  counter-reset: list 18;
+}
+ol[start="19"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="19"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="19"][type=a], ol[start="19"][style="list-style-type: lower-alpha;"], ol[start="19"].alpha, ol[start="19"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 18;
+}
+ol[start="19"][type=a] > li, ol[start="19"][style="list-style-type: lower-alpha;"] > li, ol[start="19"].alpha > li, ol[start="19"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="19"][type=a] > li:before, ol[start="19"][style="list-style-type: lower-alpha;"] > li:before, ol[start="19"].alpha > li:before, ol[start="19"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="19"][type=A], ol[start="19"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 18;
+}
+ol[start="19"][type=A] > li, ol[start="19"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="19"][type=A] > li:before, ol[start="19"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="19"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 18;
+}
+ol[start="19"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="19"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="20"] {
+  counter-reset: list 19;
+}
+ol[start="20"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="20"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="20"][type=a], ol[start="20"][style="list-style-type: lower-alpha;"], ol[start="20"].alpha, ol[start="20"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 19;
+}
+ol[start="20"][type=a] > li, ol[start="20"][style="list-style-type: lower-alpha;"] > li, ol[start="20"].alpha > li, ol[start="20"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="20"][type=a] > li:before, ol[start="20"][style="list-style-type: lower-alpha;"] > li:before, ol[start="20"].alpha > li:before, ol[start="20"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="20"][type=A], ol[start="20"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 19;
+}
+ol[start="20"][type=A] > li, ol[start="20"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="20"][type=A] > li:before, ol[start="20"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="20"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 19;
+}
+ol[start="20"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="20"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="21"] {
+  counter-reset: list 20;
+}
+ol[start="21"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="21"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="21"][type=a], ol[start="21"][style="list-style-type: lower-alpha;"], ol[start="21"].alpha, ol[start="21"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 20;
+}
+ol[start="21"][type=a] > li, ol[start="21"][style="list-style-type: lower-alpha;"] > li, ol[start="21"].alpha > li, ol[start="21"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="21"][type=a] > li:before, ol[start="21"][style="list-style-type: lower-alpha;"] > li:before, ol[start="21"].alpha > li:before, ol[start="21"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="21"][type=A], ol[start="21"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 20;
+}
+ol[start="21"][type=A] > li, ol[start="21"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="21"][type=A] > li:before, ol[start="21"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="21"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 20;
+}
+ol[start="21"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="21"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="22"] {
+  counter-reset: list 21;
+}
+ol[start="22"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="22"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="22"][type=a], ol[start="22"][style="list-style-type: lower-alpha;"], ol[start="22"].alpha, ol[start="22"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 21;
+}
+ol[start="22"][type=a] > li, ol[start="22"][style="list-style-type: lower-alpha;"] > li, ol[start="22"].alpha > li, ol[start="22"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="22"][type=a] > li:before, ol[start="22"][style="list-style-type: lower-alpha;"] > li:before, ol[start="22"].alpha > li:before, ol[start="22"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="22"][type=A], ol[start="22"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 21;
+}
+ol[start="22"][type=A] > li, ol[start="22"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="22"][type=A] > li:before, ol[start="22"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="22"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 21;
+}
+ol[start="22"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="22"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="23"] {
+  counter-reset: list 22;
+}
+ol[start="23"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="23"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="23"][type=a], ol[start="23"][style="list-style-type: lower-alpha;"], ol[start="23"].alpha, ol[start="23"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 22;
+}
+ol[start="23"][type=a] > li, ol[start="23"][style="list-style-type: lower-alpha;"] > li, ol[start="23"].alpha > li, ol[start="23"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="23"][type=a] > li:before, ol[start="23"][style="list-style-type: lower-alpha;"] > li:before, ol[start="23"].alpha > li:before, ol[start="23"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="23"][type=A], ol[start="23"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 22;
+}
+ol[start="23"][type=A] > li, ol[start="23"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="23"][type=A] > li:before, ol[start="23"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="23"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 22;
+}
+ol[start="23"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="23"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="24"] {
+  counter-reset: list 23;
+}
+ol[start="24"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="24"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="24"][type=a], ol[start="24"][style="list-style-type: lower-alpha;"], ol[start="24"].alpha, ol[start="24"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 23;
+}
+ol[start="24"][type=a] > li, ol[start="24"][style="list-style-type: lower-alpha;"] > li, ol[start="24"].alpha > li, ol[start="24"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="24"][type=a] > li:before, ol[start="24"][style="list-style-type: lower-alpha;"] > li:before, ol[start="24"].alpha > li:before, ol[start="24"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="24"][type=A], ol[start="24"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 23;
+}
+ol[start="24"][type=A] > li, ol[start="24"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="24"][type=A] > li:before, ol[start="24"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="24"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 23;
+}
+ol[start="24"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="24"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="25"] {
+  counter-reset: list 24;
+}
+ol[start="25"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="25"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="25"][type=a], ol[start="25"][style="list-style-type: lower-alpha;"], ol[start="25"].alpha, ol[start="25"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 24;
+}
+ol[start="25"][type=a] > li, ol[start="25"][style="list-style-type: lower-alpha;"] > li, ol[start="25"].alpha > li, ol[start="25"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="25"][type=a] > li:before, ol[start="25"][style="list-style-type: lower-alpha;"] > li:before, ol[start="25"].alpha > li:before, ol[start="25"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="25"][type=A], ol[start="25"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 24;
+}
+ol[start="25"][type=A] > li, ol[start="25"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="25"][type=A] > li:before, ol[start="25"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="25"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 24;
+}
+ol[start="25"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="25"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="26"] {
+  counter-reset: list 25;
+}
+ol[start="26"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="26"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="26"][type=a], ol[start="26"][style="list-style-type: lower-alpha;"], ol[start="26"].alpha, ol[start="26"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 25;
+}
+ol[start="26"][type=a] > li, ol[start="26"][style="list-style-type: lower-alpha;"] > li, ol[start="26"].alpha > li, ol[start="26"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="26"][type=a] > li:before, ol[start="26"][style="list-style-type: lower-alpha;"] > li:before, ol[start="26"].alpha > li:before, ol[start="26"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="26"][type=A], ol[start="26"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 25;
+}
+ol[start="26"][type=A] > li, ol[start="26"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="26"][type=A] > li:before, ol[start="26"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="26"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 25;
+}
+ol[start="26"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="26"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="27"] {
+  counter-reset: list 26;
+}
+ol[start="27"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="27"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="27"][type=a], ol[start="27"][style="list-style-type: lower-alpha;"], ol[start="27"].alpha, ol[start="27"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 26;
+}
+ol[start="27"][type=a] > li, ol[start="27"][style="list-style-type: lower-alpha;"] > li, ol[start="27"].alpha > li, ol[start="27"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="27"][type=a] > li:before, ol[start="27"][style="list-style-type: lower-alpha;"] > li:before, ol[start="27"].alpha > li:before, ol[start="27"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="27"][type=A], ol[start="27"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 26;
+}
+ol[start="27"][type=A] > li, ol[start="27"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="27"][type=A] > li:before, ol[start="27"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="27"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 26;
+}
+ol[start="27"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="27"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="28"] {
+  counter-reset: list 27;
+}
+ol[start="28"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="28"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="28"][type=a], ol[start="28"][style="list-style-type: lower-alpha;"], ol[start="28"].alpha, ol[start="28"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 27;
+}
+ol[start="28"][type=a] > li, ol[start="28"][style="list-style-type: lower-alpha;"] > li, ol[start="28"].alpha > li, ol[start="28"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="28"][type=a] > li:before, ol[start="28"][style="list-style-type: lower-alpha;"] > li:before, ol[start="28"].alpha > li:before, ol[start="28"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="28"][type=A], ol[start="28"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 27;
+}
+ol[start="28"][type=A] > li, ol[start="28"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="28"][type=A] > li:before, ol[start="28"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="28"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 27;
+}
+ol[start="28"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="28"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="29"] {
+  counter-reset: list 28;
+}
+ol[start="29"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="29"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="29"][type=a], ol[start="29"][style="list-style-type: lower-alpha;"], ol[start="29"].alpha, ol[start="29"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 28;
+}
+ol[start="29"][type=a] > li, ol[start="29"][style="list-style-type: lower-alpha;"] > li, ol[start="29"].alpha > li, ol[start="29"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="29"][type=a] > li:before, ol[start="29"][style="list-style-type: lower-alpha;"] > li:before, ol[start="29"].alpha > li:before, ol[start="29"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="29"][type=A], ol[start="29"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 28;
+}
+ol[start="29"][type=A] > li, ol[start="29"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="29"][type=A] > li:before, ol[start="29"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="29"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 28;
+}
+ol[start="29"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="29"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+ol[start="30"] {
+  counter-reset: list 29;
+}
+ol[start="30"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="30"] > li:before {
+  content: counter(list) ". ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="30"][type=a], ol[start="30"][style="list-style-type: lower-alpha;"], ol[start="30"].alpha, ol[start="30"][style="list-style-type: lower-alpha;"].alpha {
+  counter-reset: list 29;
+}
+ol[start="30"][type=a] > li, ol[start="30"][style="list-style-type: lower-alpha;"] > li, ol[start="30"].alpha > li, ol[start="30"][style="list-style-type: lower-alpha;"].alpha > li {
+  list-style: none;
+  position: relative;
+  padding-left: 5px;
+}
+ol[start="30"][type=a] > li:before, ol[start="30"][style="list-style-type: lower-alpha;"] > li:before, ol[start="30"].alpha > li:before, ol[start="30"][style="list-style-type: lower-alpha;"].alpha > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="30"][type=A], ol[start="30"][style="list-style-type: upper-alpha;"] {
+  counter-reset: list 29;
+}
+ol[start="30"][type=A] > li, ol[start="30"][style="list-style-type: upper-alpha;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="30"][type=A] > li:before, ol[start="30"][style="list-style-type: upper-alpha;"] > li:before {
+  content: counter(list, upper-alpha) ") ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+ol[start="30"][style="list-style-type: upper-roman;"] {
+  counter-reset: list 29;
+}
+ol[start="30"][style="list-style-type: upper-roman;"] > li {
+  list-style: none;
+  position: relative;
+}
+ol[start="30"][style="list-style-type: upper-roman;"] > li:before {
+  content: counter(list, upper-roman) ". ";
+  counter-increment: list;
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  text-align: right;
+  margin-right: 3px;
+}
+
+.callout.lo .lo-header h3 {
+  color: #fff;
+}
+
+.lo figcaption {
+  padding-left: 30px;
+}
+.lo figcaption:empty {
+  display: none;
+}
+.lo figcaption:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 22px;
+  height: 22px;
+  display: block;
+  background: url(/book/common/kepalairas_light.svg) no-repeat !important;
+  transform: translateY(-50%) rotate(0deg);
+}
+.lo figcaption .feladat {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 0;
+}
+.lo figcaption .feladat:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url(/book/common/kepalairas_kerdojel_light.svg) no-repeat;
+}
+
+section.sticky-after + section .callout-wrapper {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+section.sticky-after + section .callout-wrapper .callout {
+  margin-top: 0;
+}
+section.sticky-after + section .callout-wrapper .callout h3:only-child:not(.audio-title) {
+  margin: inherit;
+}
+section.sticky-after + section .wide-section {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+section.sticky-after .callout h3:only-child:not(.audio-title) {
+  margin: inherit;
+}
+section.sticky-after .section-content {
+  margin-bottom: 0 !important;
+}
+
+.section-content::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  width: 0;
+}

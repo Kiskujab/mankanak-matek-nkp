@@ -1,0 +1,52 @@
+[
+ {
+  "slug": "01-fejezetnyito",
+  "title": "Fejezetnyitó",
+  "group": "Bevezető"
+ },
+ {
+  "slug": "02-beszedes-abrak",
+  "title": "Beszédes ábrák",
+  "group": "Bevezető"
+ },
+ {
+  "slug": "03-geometriai-szerkesztesek",
+  "title": "A geometriai szerkesztésekről",
+  "group": "Olvasmány · emelt szint"
+ },
+ {
+  "slug": "04-11-alapszerkesztesek",
+  "title": "11. Alapszerkesztések",
+  "group": "Leckék"
+ },
+ {
+  "slug": "05-12-13-haromszogek",
+  "title": "12–13. A háromszögekre vonatkozó ismeretek",
+  "group": "Leckék"
+ },
+ {
+  "slug": "06-14-15-pitagorasz",
+  "title": "14–15. A Pitagorasz-tétel",
+  "group": "Leckék"
+ },
+ {
+  "slug": "07-16-17-nevezetes-pontok",
+  "title": "16–17. A háromszögek nevezetes pontjai, vonalai",
+  "group": "Leckék"
+ },
+ {
+  "slug": "08-erinto-korok",
+  "title": "A háromszög oldalait érintő körök",
+  "group": "Olvasmány · emelt szint"
+ },
+ {
+  "slug": "09-19-sokszogek",
+  "title": "19. A sokszögekről",
+  "group": "Leckék"
+ },
+ {
+  "slug": "10-fejezetzaro",
+  "title": "Fejezetzáró",
+  "group": "Lezárás"
+ }
+]

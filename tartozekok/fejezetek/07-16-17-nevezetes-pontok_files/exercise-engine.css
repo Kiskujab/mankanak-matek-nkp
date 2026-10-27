@@ -1,0 +1,2091 @@
+@charset "UTF-8";
+/** EXE - EXercise Engine
+*
+*  Teszt CSS a látványterv alapján.
+*
+*  A végleges design a publikus felületen van.
+*/
+/* Látványterv alap betűtípus */
+/* foundation sizes */
+/* Small only */
+/* Medium only */
+/* Large only */
+/* helper class */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Sigmar+One");
+@media screen and (max-width: 74.99875em) {
+  .show-for-large-up {
+    display: none !important;
+  }
+}
+@media print, screen and (min-width: 74.99875em) {
+  .hide-for-large-up {
+    display: none !important;
+  }
+}
+@font-face {
+  font-family: "EXOBold";
+  src: url("../fonts/Exo/Exo-Bold.ttf");
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "OpenSansSemiBold";
+  src: url("../fonts/Open_Sans/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "BloggerSans";
+  src: url("../fonts/BloggerSans/BloggerSans.ttf");
+}
+@font-face {
+  font-family: "BloggerSansBold";
+  src: url("../fonts/BloggerSans/BloggerSans-Bold.ttf");
+}
+@font-face {
+  font-family: "ClanPro";
+  src: url("../fonts/ClanPro/ClanProBlack.ttf");
+}
+@font-face {
+  font-family: "ClanProBold";
+  src: url("../fonts/ClanPro/ClanProBold.ttf");
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik/Rubik-Regular.ttf");
+}
+@font-face {
+  font-family: "RubikBold";
+  src: url("../fonts/Rubik/Rubik-Bold.ttf");
+}
+@font-face {
+  font-family: "RubikBoldItalic";
+  src: url("../fonts/Rubik/Rubik-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "RubikExtraBold";
+  src: url("../fonts/Rubik/Rubik-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "RubikExtraBoldItalic";
+  src: url("../fonts/Rubik/Rubik-ExtraBoldItalic.ttf");
+}
+@font-face {
+  font-family: "RubikItalic";
+  src: url("../fonts/Rubik/Rubik-Italic.ttf");
+}
+@font-face {
+  font-family: "RubikSemiBold";
+  src: url("../fonts/Rubik/Rubik-SemiBold.ttf");
+}
+@font-face {
+  font-family: "nkpv2";
+  src: url("../icons/nkpv2/fonts/nkpv2.eot?8hlupc");
+  src: url("../icons/nkpv2/fonts/nkpv2.eot?8hlupc#iefix") format("embedded-opentype"), url("../icons/nkpv2/fonts/nkpv2.ttf?8hlupc") format("truetype"), url("../icons/nkpv2/fonts/nkpv2.woff?8hlupc") format("woff"), url("../icons/nkpv2/fonts/nkpv2.svg?8hlupc#nkpv2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change ../icons/nkpv2/fonts */
+  font-family: "nkpv2" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dot-menu:before {
+  content: "\e90e";
+}
+
+.icon-check:before {
+  content: "\e90c";
+}
+
+.icon-uncheck:before {
+  content: "\e90d";
+}
+
+.icon-back:before {
+  content: "\e90a";
+}
+
+.icon-save:before {
+  content: "\e90b";
+}
+
+.icon-chevron-prev:before {
+  content: "\e906";
+}
+
+.icon-chevron-next:before {
+  content: "\e907";
+}
+
+.icon-chevron-start:before {
+  content: "\e908";
+}
+
+.icon-chevron-end:before {
+  content: "\e909";
+}
+
+.icon-xmark:before {
+  content: "\e905";
+}
+
+.icon-bars:before {
+  content: "\e904";
+}
+
+.icon-like:before {
+  content: "\e902";
+}
+
+.icon-star:before {
+  content: "\e903";
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+
+.icon-search:before {
+  content: "\e901";
+}
+
+/*NKP NEW DESIGN*/
+/*NKP NEW DESIGN*/
+/*NKP NEW DESIGN*/
+/*NKP NEW DESIGN*/
+/*NKP NEW DESIGN*/
+/* button colors */
+/* site config */
+/* classroom / shared items*/
+.row {
+  max-width: 1350px;
+}
+.row > .row {
+  width: 100%;
+}
+
+.ReactTable .rt-resizer {
+  width: 10px !important;
+  right: -2px !important;
+}
+
+.exe-wrapper {
+  margin-top: 0 !important;
+  margin-bottom: 2rem !important;
+  /*border-radius: 40px;   */
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  height: max-content;
+}
+
+.dialog .exe-wrapper {
+  margin-bottom: 0 !important;
+}
+
+.exe-wrapper .row {
+  max-width: none;
+  padding: 0;
+  /* Történelem-ben a row-nak van paddingja */
+}
+
+.exe-container .exe-header {
+  display: flex;
+  align-items: center;
+  background: #444444;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.exe-container .exe-header .exe-header-info {
+  /* max-width: calc(100% - 70px); */
+  flex: 1;
+}
+.exe-container .exe-header .exe-header-tools {
+  flex: 0 auto;
+}
+.exe-container .exe-header .tools-button.tools-button-maximize img, .exe-container .exe-header .tools-button.tools-button-medium img, .exe-container .exe-header .tools-button.tools-button-minimize img {
+  height: 1rem;
+}
+
+.exe-wrapper .exe-container {
+  color: #000000;
+}
+
+/*
+.exe-container .exe-header::after {
+    content: '';
+    height: 0;
+    width: 0;
+    clear: both;
+    display: block;
+}
+*/
+.exe-container .exe-header h3 {
+  font-size: 1rem;
+}
+
+.exe-container.paused .exe-description-wrapper, .exe-container.paused .exe-content {
+  filter: blur(5px);
+}
+
+.exe-engine .item-hidden {
+  display: none !important;
+}
+
+.exe-container-simple {
+  background-color: white;
+  border: 3px solid #c5c5c5;
+  border-radius: 1vw;
+  /* max-height: 100%;
+  height: calc(100vh - 200px); */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.exe-container-simple .exe-header .exe-header-info {
+  display: none;
+}
+
+/*
+.exe-container-simple .exe-header-tools{
+    position: absolute;
+    top:5px;
+    right: 10px;
+    z-index: 12; /*Z_INDEX_EXERCISE_MASK+1
+}
+*/
+.exe-container-simple .exe-modal-parent {
+  height: 100%;
+  overflow: hidden;
+}
+
+.exe-container-simple .exe-description {
+  margin: 0 25px;
+}
+
+/*
+.exe-container-simple .exe-controls-header {
+    padding-top:5px;
+}
+*/
+.exe-container-simple.waiting-to-play .answer-container {
+  visibility: hidden;
+}
+
+.exe-container-simple .table-scroll-wrap[data-more-left]:before {
+  background: linear-gradient(to right, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0) 100%);
+}
+
+.exe-container-simple .table-scroll-wrap[data-more-right]:after {
+  background: linear-gradient(to left, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media screen and (max-width: 1023px) {
+  .exe-container-simple .eke-fillgap-dnd .area-shadow {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .exe-container-simple .eke-fillgap-dnd .area-shadow[data-shadow-b] {
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+.exe-start-mask {
+  position: absolute;
+  top: 5px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.exe-container-simple .exe-start-mask {
+  background: none;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0));
+}
+
+.exe-container-simple.successful .exe-start-mask {
+  opacity: 0;
+  animation-name: maskFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes maskFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.exe-start-button {
+  background: #2d855c;
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+}
+
+.exe-start-button:hover,
+.exe-start-button:active,
+.exe-start-button:focus {
+  background: #45bf86;
+}
+
+.exe-controls-header {
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exe-container .exe-controls-header {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: #444444;
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .exe-container .exe-controls-header {
+    border-bottom-left-radius: 40px;
+  }
+}
+.exe-controls-header .exe-controls-cell {
+  text-align: center;
+  /* width: calc(100% / 3); */
+  padding: 0 1rem;
+  /* margin-right: 1rem !important; */
+}
+
+.exe-controls-cell.sub-counter {
+  font-size: 1.2rem;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.exe-controls-header .exe-controls-cell:first-child {
+  text-align: left;
+}
+
+.exe-controls-header .exe-controls-cell:last-child {
+  text-align: right;
+}
+
+.exe-controls-header .exe-controls-cell:last-child > span {
+  text-align: right;
+}
+
+.exe-controls-header .exe-controls-cell:last-child .exe-controls-button {
+  margin-right: unset;
+  margin-left: 0.6rem;
+}
+
+.exe-controls-header.exe-controls-countdown-active .exe-controls-cell:first-child,
+.exe-controls-header.exe-controls-countdown-active .exe-controls-cell:last-child {
+  flex: 1;
+}
+
+/*
+.exe-controls-header > * {
+    margin-right: 1rem !important;
+}
+*/
+.exe-controls-header .exe-controls-cell > span {
+  display: inline-block;
+  /*
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  flex: 1;
+  */
+}
+
+.exe-controls-button {
+  background: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-right: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.exe-controls-button:hover,
+.exe-controls-button:active,
+.exe-controls-button:focus {
+  background: none;
+  border: none;
+}
+
+.exe-controls-button i {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.exe-controls-button.simple-style i {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exe-controls-button:not(.simple-style) i {
+  border-radius: 30px;
+  width: 48px;
+  height: 48px;
+}
+
+.exe-controls-button.adjust-next-button {
+  margin-left: auto;
+}
+
+.eke-controls-button-container {
+  display: block;
+}
+
+.exe-controls-check-button i {
+  background: #83b14e url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/of_ellenorzes_1.svg") no-repeat center center/cover;
+  border: 2px solid #90c356;
+  box-shadow: 0 0 1px 2px rgb(92, 119, 74);
+}
+
+.exe-controls-check-button:hover i {
+  background-color: #5b5b5b;
+}
+
+.exe-control-task-button i {
+  background: #ff9a17 url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/uzenet.svg") no-repeat center center/cover;
+  border: 2px solid #f3bd78;
+  box-shadow: 0 0 1px 2px rgb(231, 116, 40);
+}
+
+.exe-control-task-button:hover i {
+  background-color: #5b5b5b;
+}
+
+.exe-control-teacher-button i {
+  background: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/megoldokulcs.svg") no-repeat center center/cover;
+  border: 2px solid #5b5b5b;
+  box-shadow: 0 0 1px 2px #5b5b5b;
+}
+
+.exe-controls-prew-question-button i {
+  transform: scale(-1, 1);
+  background: #83b14e url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/of_kovetkezo_1.svg") no-repeat center center/cover;
+  border: 2px solid #90c356;
+  box-shadow: 0 0 1px 2px rgb(92, 119, 74);
+}
+
+.exe-controls-prew-question-button:hover i {
+  background-color: #5b5b5b;
+}
+
+.exe-controls-new-question-button i {
+  background: #83b14e url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/of_kovetkezo_1.svg") no-repeat center center/cover;
+  border: 2px solid #90c356;
+  box-shadow: 0 0 1px 2px rgb(92, 119, 74);
+}
+
+.exe-controls-new-question-button:hover i {
+  background-color: #5b5b5b;
+}
+
+.exe-controls-fullscreen-button,
+.exe-controls-fullscreen-button:focus {
+  background: #444444;
+  padding: 0.5rem;
+}
+
+.exe-controls-fullscreen-button:hover {
+  background: #818181;
+}
+
+.exe-controls-fullscreen-button:active {
+  background: #818181;
+}
+
+.exe-controls-reload-button i {
+  background: #46bccc;
+  border: 2px solid #a4d2d8;
+  box-shadow: 0 0 1px 2px rgb(0, 151, 167);
+}
+
+.exe-controls-reload-button:not(.exe-controls-start-button) i {
+  background: #46bccc url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/of_ismetles_1.svg") no-repeat center center/cover;
+  transition: transform 300ms;
+}
+
+.exe-controls-reload-button:hover i {
+  background-color: #5b5b5b;
+}
+
+.exe-controls-reload-button:not(.exe-controls-start-button):hover i {
+  transform: rotate(45deg);
+}
+
+.exe-controls-button.simple-style {
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  /* box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5); */
+  align-items: center;
+  justify-content: center;
+}
+
+.exe-controls-button.simple-style label {
+  display: none;
+}
+
+.exe-controls-countdown .circle-graph {
+  width: 4rem;
+  height: 4rem;
+  background-color: #666;
+}
+
+.exe-controls-countdown .circle-graph.gt-50 {
+  background-color: #222;
+}
+
+.exe-controls-countdown .circle-graph-progress {
+  left: calc(50% - 2rem);
+  top: calc(50% - 2rem);
+  width: 4rem;
+  height: 4rem;
+  clip: rect(0, 4rem, 4rem, 2rem);
+}
+
+.exe-controls-countdown .circle-graph-progress .circle-graph-progress-fill {
+  left: calc(50% - 2rem);
+  top: calc(50% - 2rem);
+  width: 4rem;
+  height: 4rem;
+  clip: rect(0, 2rem, 4rem, 0);
+  background: #222;
+}
+
+.exe-controls-countdown .gt-50 .circle-graph-progress {
+  clip: rect(0, 2rem, 4rem, 0);
+}
+
+.exe-controls-countdown .gt-50 .circle-graph-progress .circle-graph-progress-fill {
+  clip: rect(0, 4rem, 4rem, 2rem);
+  background: #666;
+}
+
+.exe-controls-countdown .circle-graph-percent {
+  left: calc(50% - 1.75rem);
+  top: calc(50% - 1.75rem);
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #444;
+}
+
+.exe-controls-countdown .circle-graph-percent .circle-graph-percent-number {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: -2px;
+}
+
+.exe-controls-countdown .circle-graph-percent-button {
+  color: #ffffff;
+}
+
+.exe-controls-countdown .circle-graph-percent-button i {
+  border-radius: 15px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.exe-controls-countdown .circle-graph-percent-button label {
+  display: none;
+}
+
+/*
+.exe-controls-countdown .circle-graph-percent-button--play i {
+    background: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/of_lejatszas_1.svg") no-repeat center center / cover;
+}
+
+.exe-controls-countdown .circle-graph-percent-button--pause i {
+    background: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/of_szunet_1.svg") no-repeat center center / cover;
+}
+*/
+.exe-socials {
+  text-align: right;
+}
+
+.exe-socials button {
+  color: #fff;
+  opacity: unset;
+  color: #ffffff;
+  font-size: 12pt;
+  cursor: pointer;
+  background: #333333;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #000000;
+  vertical-align: top;
+  z-index: 10;
+  text-align: left;
+}
+.exe-socials button i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16pt;
+}
+
+.exe-socials-buttons {
+  display: inline-block;
+  background: #F6FFF8;
+  border-radius: 6px;
+  min-height: 35px;
+  min-width: 214px;
+}
+@media (max-width: 540px) {
+  .exe-socials-buttons {
+    min-width: unset;
+  }
+}
+
+.exe-socials .usr-like {
+  opacity: unset;
+  color: #206847;
+  font-size: 12pt;
+  cursor: pointer;
+  background: #F6FFF8;
+  border-radius: 0;
+  border: none;
+  vertical-align: top;
+}
+@media (max-width: 540px) {
+  .exe-socials .usr-like .button-title {
+    display: none;
+  }
+}
+
+.exe-socials .usr-like span {
+  vertical-align: middle;
+}
+
+.exe-container-simple .exe-socials .usr-like span {
+  padding-right: 5px;
+}
+
+.exe-socials .usr-like.like {
+  z-index: 20;
+}
+
+.exe-socials .usr-like i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16pt;
+}
+
+/*
+.exe-socials .usr-like.like:hover i,
+.exe-socials .usr-like-activated.like i {
+    color: #3385ff;
+}
+
+.exe-socials .usr-like:hover {
+    opacity: unset;
+    background: #444444;
+}
+*/
+.exe-socials .usr-like.favourite {
+  z-index: 10;
+}
+
+.exe-socials .usr-like.collection {
+  z-index: 10;
+  text-align: left;
+}
+
+.exe-socials .usr-like.collection i {
+  font-size: 12pt;
+  width: 20px;
+}
+.exe-socials .usr-like.collection.active {
+  background-color: #2D855C;
+  color: #fff;
+  border-radius: 6px;
+}
+.exe-socials .usr-like.collection.active i::before {
+  content: "\e905";
+}
+
+.exe-container-simple .exe-socials .usr-like.collection {
+  margin-left: 0;
+}
+
+.exe-socials .usr-like.usr-copy {
+  margin: 0;
+  margin-left: -7px;
+  z-index: 10;
+}
+
+/*
+.exe-socials .usr-like.favourite:hover i,
+.exe-socials .usr-like-activated.favourite i {
+    color: #4ab685;
+}
+*/
+.exe-touch-img-rld {
+  max-width: 45px !important;
+  max-height: 45px !important;
+  margin-bottom: 1rem !important;
+}
+
+.exe-fullscreen-close {
+  margin: 0rem 1rem !important;
+  padding: 0.1rem 0.5rem !important;
+}
+
+.exe-element-hidden {
+  visibility: hidden;
+}
+
+.exe-element-visible {
+  visibility: visible;
+}
+
+.exe-control-label {
+  /* margin-left: .5rem; */
+  /* width: 250px; */
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exe-control-label img {
+  margin-right: 10px;
+}
+
+.exe-control-label.blue-icon::before,
+.exe-control-label.green-icon::before {
+  position: unset;
+  left: unset;
+  top: unset;
+}
+
+.eke-controls-label {
+  display: inline-block;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.eke-controls-img {
+  width: 30px;
+  height: 30px;
+}
+
+.exe-controls-result-wrapper {
+  position: absolute;
+  bottom: 175px;
+  left: 15px;
+  right: 15px;
+  z-index: 20;
+  /*Z_INDEX_EXERCISE_POPUP + 2*/
+}
+
+/* @media (min-width: 1024px) {
+    left: 30px;
+    right: 30px;
+} */
+.exe-controls-result-wrapper .close-button {
+  margin-top: 13px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.exe-controls-result-wrong .close-button {
+  color: #333;
+}
+
+.exe-controls-result-wrong .exe-control-container {
+  flex-direction: column;
+}
+
+.close-button > i {
+  margin-right: 5px;
+}
+
+.exe-controls-result {
+  color: white;
+  padding: 2rem 1rem 10px 1rem;
+  font-weight: bold;
+  /*border-top-left-radius:40px;
+  border-bottom-left-radius:40px;*/
+  box-shadow: 0 -3px 10px -5px rgba(0, 0, 0, 0.5);
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 1rem;
+  margin: 15px 0 25px 0;
+  cursor: n-resize;
+}
+
+.exe-result-buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  margin-bottom: 15px;
+}
+
+.exe-result-button {
+  border: none;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  background: #3363ae;
+  padding: 10px;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+
+.exe-result-button-show-exe {
+  border-radius: 15px !important;
+}
+
+.exe-result-buttons-correct {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.exe-result-button i {
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.exe-result-button label {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+  cursor: inherit;
+}
+
+.exe-result-button:first-child {
+  border-radius: 15px;
+}
+
+.exe-result-button:last-child {
+  border-radius: 15px;
+}
+
+@media (min-width: 1024px) {
+  .exe-result-buttons {
+    width: unset;
+    flex-direction: row;
+  }
+  .exe-result-button {
+    display: inline-block;
+  }
+  .exe-result-button:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .exe-result-button:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.exe-result-button:nth-child(2n) {
+  background: #0b3982;
+}
+
+.exe-controls-result-alert {
+  background: #34aa5c;
+}
+
+.exe-controls-result-correct {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #34aa5c;
+  /* padding-bottom: 23px; */
+}
+
+.exe-controls-result-correct .exe-control-container {
+  flex: 1;
+}
+
+.exe-controls-result-wrong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #ffa300;
+}
+
+.exe-result-close-button {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: #ffa300;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 10px;
+  border-radius: 50px 50px 0 0;
+}
+.exe-result-close-button--wrong {
+  background: #ffa300;
+}
+.exe-result-close-button--correct {
+  background: #34aa5c;
+  color: #fff;
+}
+
+.exe-controls-result-wrong .exe-control-label {
+  color: #333;
+}
+
+.exe-result-text {
+  padding-left: 1rem;
+}
+
+.exe-exam-result-link {
+  color: #2ba6cb;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; <= Ezzel a feladatszerkesztőben elromlik a layout */
+  line-height: 1.2em;
+  max-height: 1.5em;
+  padding: 3px 1rem;
+  font-size: 100%;
+  white-space: nowrap;
+  clear: both;
+}
+
+.exe-exam-result-link:hover {
+  color: black;
+  background-color: white;
+}
+
+.exe-result-points {
+  /* width: 100%; */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.exe-result-points p {
+  margin-bottom: 0;
+}
+
+.exe-controls-result-wrong .exe-result-points p {
+  color: #333 !important;
+}
+
+.exe-result-points .badge {
+  font-size: 1.25em;
+  margin-left: 15px;
+  background-color: #0b3982;
+}
+
+.exe-result-links {
+  clear: both;
+  margin-bottom: 5px;
+  overflow: hidden;
+  width: 100%;
+  /* margin-top: 20px; */
+}
+
+.exe-result-links-item {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.exe-result-links-item h3 {
+  font-size: 16px;
+  /* display: inline-block; */
+}
+
+.exe-result-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  /*
+  overflow: hidden;
+  text-overflow: ellipsis;
+  */
+  /* white-space: nowrap; <= Ezzel a feladatszerkesztőben elromlik a layout */
+  line-height: 1.5em;
+  max-height: 2.3em;
+  /* padding: 3px 2rem; */
+  padding: 5px;
+  /*font-size: 110%; */
+  white-space: nowrap;
+  clear: both;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.exe-result-link i {
+  margin-right: 5px;
+}
+
+.exe-result-link:hover {
+  color: black;
+  background-color: white;
+}
+
+.exe-result-link > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exe-result-link .link__class {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .exe-result-link .link__class {
+    display: inline;
+  }
+}
+.exe-editor-result-link {
+  color: black;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; <= Ezzel a feladatszerkesztőben elromlik a layout */
+  line-height: 1.5em;
+  max-height: 2em;
+  padding: 3px 2rem;
+  font-size: 110%;
+  white-space: nowrap;
+}
+
+.exe-editor-result-link:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.exe-editor-result-link:hover {
+  color: white;
+  background-color: #2bb473;
+}
+
+.exe-test-controls {
+  padding: 4px;
+  background: repeating-linear-gradient(45deg, white, white 10px, rgb(255, 255, 180) 10px, rgb(255, 255, 180) 20px);
+}
+
+.exe-image {
+  /* max-width: 45px; */
+  max-height: 40px;
+}
+
+.exe-engine-name {
+  /* max-width: 45px; */
+  max-height: 40px;
+}
+
+.exe-level {
+  max-height: 40px;
+}
+
+.exe-main-audio {
+  width: 100%;
+}
+
+.exe-zoom-icon {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.exe-sound-icon-play {
+  margin: 5px !important;
+}
+
+@media (max-width: 1023px) {
+  .exe-zoom-icon {
+    max-width: 15px;
+    max-height: 15px;
+  }
+}
+.exe-fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0% !important;
+  padding: 0% !important;
+  z-index: 9000;
+  /* Z_INDEX_EXERCISE_FULLSCREEN */
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(10, 10, 10, 0.45);
+}
+.exe-fullscreen .exe-container {
+  width: 80%;
+}
+
+.exe-container .exe-container-fullscreen-div {
+  height: 100%;
+  box-shadow: 0px 20px 20px -10px #333333;
+}
+
+/* ------- Exercise engines global styles -------- */
+.exe-container .exe-engine {
+  border-style: solid;
+  border-color: #444444;
+  border-width: 5px 10px 10px 10px;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+.exe-container .exe-engine[data-min-height=true] {
+  min-height: 400px;
+}
+
+/*
+@media (min-width: 1024px) {
+    .exe-engine {
+        border-width: 5px 15px 15px 15px;
+    }
+}
+*/
+.exe-container-fullscreen-div:not(.exe-container-simple) .exe-engine {
+  height: calc(100vh - 169px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.exe-container-fullscreen-div.exe-container-simple .exe-engine,
+.exerciseList-maincomponent .exe-container-fullscreen-div.exe-container-simple .exe-engine {
+  height: calc(100vh - 85px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.exe-container-fullscreen-div:not(.exe-container-simple) .exe-controls-cell {
+  height: 55px;
+}
+
+.exerciseList-maincomponent .exe-fullscreen .exe-engine {
+  height: calc(100vh - 1rem - 184px);
+}
+
+.exe-container-simple .exe-engine {
+  padding: 15px;
+  background-size: cover;
+  min-height: 100%; /*60vh;*/
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.exe-container-simple .exe-description {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  text-align: center;
+  border-radius: 0.3vw;
+  border: 2px solid #c5c5c5;
+}
+
+.exe-container-simple .exe-description:empty {
+  display: none;
+}
+
+/* .exe-engine p{
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2%;
+    text-align: center;
+    border-radius: 0.3vw;
+    /* border: 2px solid rgb(161, 161, 161);
+    overflow-wrap: break-word;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5)
+} */
+.exe-container .exe-engine .exe-description-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0 0 -15px;
+  padding: 0 15px;
+  flex: 1;
+}
+.exe-container .exe-engine .exe-description-wrapper > * {
+  width: calc(100% - 15px);
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.exe-container .exe-engine .exe-description-wrapper.wrapper-simple {
+  flex-direction: row;
+}
+
+@media (min-width: 1024px) {
+  .exe-container .exe-engine .exe-description-wrapper > * {
+    width: unset;
+  }
+}
+.exe-container .exe-engine .exe-sound-wrapper {
+  padding: 0 15px;
+}
+
+.exe-container .exe-engine .exe-description {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2%;
+  text-align: center;
+  border-radius: 0.3vw;
+  /*border: 2px solid rgb(161, 161, 161); */
+  overflow-wrap: break-word;
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: auto;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  max-height: 30vh;
+}
+.exe-container .exe-engine .exe-description > div > p:last-of-type {
+  margin-bottom: 0;
+}
+.exe-container .exe-engine .exe-description .exe-table-wo-design tbody {
+  border-color: inherit;
+  background-color: unset;
+}
+.exe-container .exe-engine .exe-description .exe-table-wo-design tbody tr:nth-child(even) {
+  background-color: unset;
+}
+.exe-container .exe-engine .exe-description .exe-table-wo-design tbody th, .exe-container .exe-engine .exe-description .exe-table-wo-design tbody td {
+  border-color: inherit;
+}
+.exe-container .exe-engine .exe-description table[style*=background-color] tbody {
+  background-color: unset;
+}
+.exe-container .exe-engine .exe-description table[style*=background-color] tbody tr:nth-child(even) {
+  background-color: unset;
+}
+.exe-container .exe-engine .exe-description table[style*=border-color] tbody {
+  border-color: inherit;
+}
+.exe-container .exe-engine .exe-description table[style*=border-color] tbody tr:nth-child(even) {
+  border-color: inherit;
+}
+.exe-container .exe-engine .exe-description table[style*=border-color] tbody th, .exe-container .exe-engine .exe-description table[style*=border-color] tbody td {
+  border-color: inherit;
+}
+.exe-container .exe-engine .exe-description .w-100 {
+  width: 100%;
+}
+
+.exe-container .exe-engine .exe-description.description-simple {
+  position: relative;
+  padding: 2% 5% 2% 2%;
+}
+
+.exe-container .exe-engine .exe-description.exe-description-active {
+  max-height: 80vh;
+  padding-bottom: 0;
+}
+
+.exe-container .exe-engine .description-full-screen {
+  font-size: 20px;
+  position: absolute;
+  height: auto;
+  right: 1%;
+  top: 1%;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .exe-container .exe-engine .exe-description {
+    width: calc(70% - 15px);
+  }
+}
+.exe-container .exe-engine .exe-task-files {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.3rem;
+  border-radius: 0.3vw;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1024px) {
+  .exe-container .exe-engine .exe-task-files {
+    width: calc(30% - 15px);
+  }
+}
+.exe-engine-audio {
+  width: 100%;
+}
+
+.exe-engine-illustration {
+  max-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exe-engine-illustration--extension {
+  max-height: 300px;
+}
+
+.exe-engine-video {
+  max-width: 500px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+}
+
+.exe-engine-subquestion-sound {
+  width: 100%;
+}
+
+.exe-engine figure {
+  z-index: unset;
+}
+
+.exe-engine .answer-div {
+  padding: 2px 5px;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.44);
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  border: 5px solid transparent;
+}
+
+.exe-engine .answer-div.dropped {
+  margin: 0 auto;
+}
+
+.exe-engine .exe-illustration-wrapper, .exe-engine .exe-illustration-element {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 0 -15px;
+  padding: 0 15px;
+}
+.exe-engine .exe-illustration-wrapper > *, .exe-engine .exe-illustration-element > * {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.exe-engine .exe-illustration-wrapper .exe-image-wrap, .exe-engine .exe-illustration-element .exe-image-wrap {
+  margin: 0 0 15px 15px;
+}
+.exe-engine .exe-illustration-wrapper .exe-image-wrap.exe-image-lazysizes img, .exe-engine .exe-illustration-element .exe-image-wrap.exe-image-lazysizes img {
+  width: 100%;
+  height: auto;
+}
+.exe-engine .exe-illustration-wrapper .exe-engine-video, .exe-engine .exe-illustration-element .exe-engine-video {
+  width: unset;
+  margin: 0 0 15px 15px;
+}
+
+/* Engince checker helpers */
+.exe-engine .exe-content .eke-engine-checked-bg {
+  background-color: orange;
+  border-color: rgb(133, 97, 30);
+  color: #000000;
+}
+
+.exe-engine .exe-content .eke-engine-show-correct-highlight {
+  border-color: #348034;
+  border-width: 3px;
+}
+
+.exe-engine .exe-content .exe-engine-correct-bg {
+  background-color: rgba(52, 128, 52, 0.75);
+  border-color: #348034;
+  color: #ffffff;
+}
+
+.exe-engine .exe-content .eke-engine-show-correct-bg {
+  background-color: #348034;
+  border-color: #348034;
+  color: #ffffff;
+}
+
+.exe-engine .exe-content .exe-engine-wrong-bg {
+  background-color: rgb(209, 52, 52);
+  border-color: rgb(209, 52, 52);
+  color: #ffffff;
+}
+
+.exe-engine .exe-content .exe-engine-check-correct {
+  border-color: #348034;
+}
+
+.exe-engine .exe-content .exe-engine-check-wrong {
+  border-color: rgb(209, 52, 52);
+}
+
+.exe-engine .placeholder-div {
+  pointer-events: none;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  background-clip: padding-box;
+}
+
+.exe-engine .placeholder-div img {
+  visibility: hidden !important;
+}
+
+.exe-engine [data-simplemode=true] .placeholder-div .exe-image-wrap {
+  background-color: rgba(221, 221, 221, 0.1) !important;
+}
+
+.exe-engine .aria-live {
+  position: absolute;
+  transform: scale(0);
+  height: 0;
+}
+
+.exe-engine .aria-drag-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /*
+  background: #000000;
+  width: 5px;
+  height: 5px;
+  */
+  transform: scale(0);
+  overflow: hidden;
+}
+
+.exe-engine .droparea-dropdown {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  list-style: none;
+  /* text-transform: capitalize; */
+  z-index: 100;
+}
+
+.exe-engine .droparea-dropdown li {
+  border: none;
+  padding: 5px;
+}
+
+.exe-engine .droparea-dropdown li:hover,
+.exe-engine .droparea-dropdown li:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.exe-engine-play-sound {
+  padding-right: 10px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.exe-image-wrap {
+  position: relative;
+  margin: auto;
+  display: table;
+  /* background-color: rgba(255, 255, 255, 0.8); OFI-Ticket#2018100171000018 -  általános hiba - képátlátszóság*/
+  background-color: transparent;
+}
+
+.exe-image-wrap .exe-zoom-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.exe-modal-parent {
+  position: relative;
+}
+
+.exe-modal-parent .reveal-overlay {
+  position: absolute;
+}
+
+.exe-modal-parent .reveal {
+  position: relative;
+}
+
+.exe-wrapper ul li::before {
+  display: none;
+}
+
+/*  Level icons */
+.exe-container-level-div {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.exe-level-circle {
+  width: 16px;
+  background-repeat: no-repeat;
+  height: 16px;
+  margin: 3px;
+  display: inline-block;
+}
+
+.exe-header .c1,
+.exe-header-lowgrade .c1 {
+  background-image: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/nehezseg_1.svg");
+}
+
+.exe-header .c2,
+.c3,
+.c4,
+.c5,
+.exe-header-lowgrade .c2,
+.c3,
+.c4,
+.c5 {
+  background-image: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/nehezseg_ures.svg");
+}
+
+.exe-progress {
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 0 10px 10px 10px;
+  background: #444444;
+}
+
+.exe-container-simple .exe-progress {
+  padding: 2px;
+  background: #e6e6e6;
+}
+
+.exe-progress .progress-meter {
+  border-radius: 0;
+  background: #888888;
+}
+
+.exe-container-simple .exe-progress .progress-meter {
+  border-radius: 20px;
+  background: #888888;
+}
+
+.exe-earned-points {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #444444;
+  border-bottom-left-radius: 50px;
+  color: #ffffff;
+  padding: 0 20px 1px 25px;
+  font-weight: bold;
+  font-size: 16pt;
+  z-index: 10;
+}
+
+.exe-container-level-2 .c2,
+.exe-container-level-3 .c2,
+.exe-container-level-4 .c2,
+.exe-container-level-5 .c2 {
+  background-image: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/nehezseg_2.svg");
+}
+
+.exe-container-level-3 .c3,
+.exe-container-level-4 .c3,
+.exe-container-level-5 .c3 {
+  background-image: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/nehezseg_3.svg");
+}
+
+.exe-container-level-4 .c4,
+.exe-container-level-5 .c4 {
+  background-image: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/nehezseg_4.svg");
+}
+
+.exe-container-level-5 .c5 {
+  background-image: url("/img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/nehezseg_5.svg");
+}
+
+.exe-container-messagebox-mask {
+  position: absolute;
+  top: 5px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.exe-container-simple .exe-container-messagebox-mask {
+  background: none;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0));
+}
+
+.exe-container-replay-mask {
+  position: absolute;
+  top: 5px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.exe-container-messagebox-header {
+  /* ez arra kell hogy renderelje ki normálisan a message box contentet és ne tűnjön el scrollozáskor */
+  overflow: initial !important;
+}
+
+.exe-container-messagebox {
+  border-radius: 0.3vw;
+  box-shadow: 0 2px 34px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 50px;
+  overflow: auto;
+  z-index: 11;
+  /* Z_INDEX_EXERCISE_POPUP */
+}
+
+.exe-container-messagebox-small {
+  top: unset;
+  bottom: unset;
+  margin: 20px auto;
+  width: 90%;
+  max-height: 70%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .exe-container-messagebox-small {
+    width: 70%;
+    max-height: 70%;
+  }
+}
+.exe-container-messagebox-title {
+  background: #444;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.exe-container-messagebox-close {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.exe-container-messagebox-close:hover {
+  color: rgb(255, 255, 255);
+}
+
+.exe-container-messagebox-content {
+  padding: 1rem;
+  overflow: auto;
+}
+
+.exe-container-messagebox-result {
+  padding: 1rem 1rem 0.5rem 1rem;
+  background: #4dd0e1;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.exe-container-messagebox-result .score-title {
+  margin-right: 5px;
+}
+
+.exe-container-messagebox-result .score {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.exe-editor-fullscreen-tab {
+  width: 100%;
+}
+
+.exe-editor-panel-flex {
+  display: flex;
+}
+
+.exe-editor-panel-padding {
+  padding: 1em;
+}
+
+.exe-editor-icons {
+  width: 25px;
+  margin-right: 5px;
+}
+
+/* Table scroll gradients */
+.table-scroll-wrap {
+  position: relative;
+}
+
+.table-scroll-wrap[data-more-left]:before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 20px;
+  width: 10px;
+  height: 100%;
+  /* background: linear-gradient(to right, rgba(125,125,125,1) 10%,rgba(125,125,125,0) 100%); */
+  background: linear-gradient(to right, rgb(202, 245, 185) 10%, rgba(202, 245, 185, 0) 100%);
+}
+
+.table-scroll-wrap[data-more-right]:after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  bottom: 20px;
+  width: 15px;
+  height: 100%;
+  /* background: linear-gradient(to left, rgba(125,125,125,1) 10%,rgba(125,125,125,0) 100%); */
+  background: linear-gradient(to left, rgb(202, 245, 185) 10%, rgba(202, 245, 185, 0) 100%);
+}
+
+.exercise-tip {
+  max-width: 80% !important;
+}
+
+.blue-icon::before {
+  content: "!";
+  /* background: url(../img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/megoldas_hibas_alert_1.svg) no-repeat; */
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #3363ae;
+  color: #fff;
+  margin: 0 10px 0 0;
+  display: flex;
+  flex-shrink: 0;
+  position: absolute;
+  top: 38px;
+  left: 20px;
+  font-size: xx-large;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  /* background: url(../img/IKON_SET/FELADATMOTOR/KONTENER_GOMBOK/vegleges/megoldas_hibas_alert_1.svg) no-repeat; */
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #006252;
+  color: #fff;
+  margin: 0 10px 0 0;
+  display: flex;
+  flex-shrink: 0;
+  position: absolute;
+  top: 38px;
+  left: 20px;
+  font-size: x-large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.exe-control-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+
+.exe-control-container > * {
+  margin-left: 20px;
+}
+
+@media (max-width: 1023px) {
+  .exe-control-container {
+    /* margin-bottom: 30px; */
+  }
+}
+.exe-sni-result-wrapper {
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+}
+
+.sni-congrats {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 250px;
+  line-height: 1;
+  margin: 0 auto;
+  z-index: 11;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sni-congrats-title {
+  transform-origin: 50% 50%;
+  font-size: 60px;
+  font-family: "Sigmar One", cursive;
+  cursor: pointer;
+  z-index: 13;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.sni-congrats-image {
+  transform-origin: 50% 50%;
+  z-index: 13;
+  width: 250px;
+}
+
+.particle {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 12;
+  font-size: 30px;
+  /* display: none;	 */
+}
+
+.star {
+  color: #ffcc00;
+}
+
+.blob {
+  background: #d5f2ff;
+  background: rgba(255, 204, 0, 0.25);
+  border-radius: 50%;
+  display: block;
+}
+
+.exe-engine .exe-content[data-containermode=scs],
+.exe-engine .exe-content[data-containermode=sr] {
+  pointer-events: none;
+  /*
+  .exercise-container, .answer-div, .answer-item, .elem-div, .draggable-div, input {
+      pointer-events: none;
+  }
+  */
+}
+.exe-engine .exe-content[data-containermode=scs] .icon-shrinkgrow,
+.exe-engine .exe-content[data-containermode=scs] .exe-zoom-button,
+.exe-engine .exe-content[data-containermode=scs] .img-modal-icon,
+.exe-engine .exe-content[data-containermode=scs] .exe-engine-play-sound,
+.exe-engine .exe-content[data-containermode=sr] .icon-shrinkgrow,
+.exe-engine .exe-content[data-containermode=sr] .exe-zoom-button,
+.exe-engine .exe-content[data-containermode=sr] .img-modal-icon,
+.exe-engine .exe-content[data-containermode=sr] .exe-engine-play-sound {
+  pointer-events: initial;
+}
+
+/* Shrink and Grow Styles */
+.exe-engine .answer-div-text-max-height {
+  max-height: 65px;
+}
+
+.exe-engine .answer-div[data-shrinkandgo],
+.exe-engine .answer-item[data-shrinkandgo] {
+  position: relative;
+  /* padding-bottom: 16px; */
+  transition: max-height 500ms;
+}
+
+.exe-engine .answer-div[data-shrinkandgo][data-shrinked="0"],
+.exe-engine .answer-item[data-shrinkandgo][data-shrinked="0"] {
+  padding-bottom: 16px;
+}
+
+.exe-engine .answer-div[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine .answer-div[data-shrinkandgo][data-shrinked="1"]:hover::after,
+.exe-engine .answer-item[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine .answer-item[data-shrinkandgo][data-shrinked="1"]:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+}
+
+.exe-engine .answer-div[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine .answer-item[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(117, 88, 72, 0) 0%, rgb(117, 88, 72) 50%);
+}
+
+.exe-engine [data-simplemode=true] .answer-div[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine [data-simplemode=true] .answer-item[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%);
+}
+
+.exe-engine .answer-div.exe-engine-correct-bg[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine .answer-item.exe-engine-correct-bg[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(52, 128, 52, 0.2) 0%, rgb(52, 128, 52) 50%);
+}
+
+.exe-engine [data-simplemode=true] .answer-div.exe-engine-correct-bg[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine [data-simplemode=true] .answer-item.exe-engine-correct-bg[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(52, 128, 52, 0.2) 0%, rgb(52, 128, 52) 50%);
+}
+
+.exe-engine .answer-div.eke-engine-show-correct-bg[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine .answer-item.eke-engine-show-correct-bg[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(52, 128, 52, 0.2) 0%, rgb(52, 128, 52) 50%);
+}
+
+.exe-engine [data-simplemode=true] .answer-div.eke-engine-show-correct-bg[data-shrinkandgo][data-shrinked="1"]::after,
+.exe-engine [data-simplemode=true] .answer-item.eke-engine-show-correct-bg[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(52, 128, 52, 0.2) 0%, rgb(52, 128, 52) 50%);
+}
+
+.exe-engine .answer-div[data-shrinkandgo][data-shrinked="0"],
+.exe-engine .answer-item[data-shrinkandgo][data-shrinked="0"] {
+  max-height: 700px;
+}
+
+.exe-engine .answer-div[data-shrinkandgo] .icon-shrinkgrow,
+.exe-engine .answer-item[data-shrinkandgo] .icon-shrinkgrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 5;
+  padding: 0 10px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Font Awesome 5 Free" !important;
+}
+
+/* Shrink and Grow Styles - Engine specific */
+.wm-dnd-item-to-area .answer-div[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgb(255, 255, 255) 100%);
+}
+
+.wm-dnd-image-area .answer-div[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgb(255, 255, 255) 100%);
+}
+
+.eke-pairing .answer-item[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgb(255, 255, 255) 100%);
+}
+
+.eke-pairing input:hover + .answer-item[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(250, 249, 187, 0.2) 0%, rgb(250, 249, 187) 100%);
+}
+
+.eke-pairing input:checked + .answer-item[data-shrinkandgo][data-shrinked="1"]::after,
+.eke-pairing input:checked:hover + .answer-item[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(255, 163, 0, 0.2) 0%, rgb(255, 163, 0) 100%);
+}
+
+.eke-pairing input + .answer-item.exe-engine-correct-bg[data-shrinkandgo][data-shrinked="1"]::after,
+.eke-pairing input:hover + .answer-item.exe-engine-correct-bg[data-shrinkandgo][data-shrinked="1"]::after {
+  background: linear-gradient(to bottom, rgba(52, 128, 52, 0.2) 0%, rgb(52, 128, 52) 100%);
+}

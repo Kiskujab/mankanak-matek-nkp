@@ -1,0 +1,192 @@
+@font-face {
+  font-family: 'nkp-admin';
+  src:  url('fonts/nkp-admin.eot?qm14ci');
+  src:  url('fonts/nkp-admin.eot?qm14ci#iefix') format('embedded-opentype'),
+    url('fonts/nkp-admin.ttf?qm14ci') format('truetype'),
+    url('fonts/nkp-admin.woff?qm14ci') format('woff'),
+    url('fonts/nkp-admin.svg?qm14ci#nkp-admin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i[class^="nkp-"], i[class*=" nkp-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'nkp-admin' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-right: 5px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nkp-icon-delete:before {
+  content: "\e900";
+}
+.nkp-icon-edit-new:before {
+  content: "\e901";
+}
+.nkp-icon-filter:before {
+  content: "\e902";
+}
+.nkp-icon-hide:before {
+  content: "\e903";
+}
+.nkp-icon-next:before {
+  content: "\e904";
+}
+.nkp-icon-previous:before {
+  content: "\e905";
+}
+.nkp-icon-show:before {
+  content: "\e906";
+}
+.nkp-icon-view:before {
+  content: "\e907";
+}
+.nkp-icon-administration-category:before {
+  content: "\e908";
+}
+.nkp-icon-administration-institute-handling:before {
+  content: "\e909";
+}
+.nkp-icon-administration-institutes:before {
+  content: "\e90a";
+}
+.nkp-icon-administration-places-of-operation:before {
+  content: "\e90b";
+}
+.nkp-icon-crud:before {
+  content: "\e90c";
+}
+.nkp-icon-editorial-process:before {
+  content: "\e90d";
+}
+.nkp-icon-editorial-process-settings:before {
+  content: "\e90e";
+}
+.nkp-icon-excersises:before {
+  content: "\e90f";
+}
+.nkp-icon-excersises-repo:before {
+  content: "\e910";
+}
+.nkp-icon-fav-no:before {
+  content: "\e911";
+}
+.nkp-icon-fav-yes:before {
+  content: "\e912";
+}
+.nkp-icon-file-explorer:before {
+  content: "\e913";
+}
+.nkp-icon-groups-roles:before {
+  content: "\e914";
+}
+.nkp-icon-help:before {
+  content: "\e915";
+}
+.nkp-icon-lesson-edit:before {
+  content: "\e916";
+}
+.nkp-icon-lesson-new:before {
+  content: "\e917";
+}
+.nkp-icon-logout:before {
+  content: "\e918";
+}
+.nkp-icon-master-data-category:before {
+  content: "\e919";
+}
+.nkp-icon-master-data-meta-categories:before {
+  content: "\e91a";
+}
+.nkp-icon-master-data-partners:before {
+  content: "\e91b";
+}
+.nkp-icon-minus:before {
+  content: "\e91c";
+}
+.nkp-icon-my-excersises-repo:before {
+  content: "\e91d";
+}
+.nkp-icon-my-lessons-repo:before {
+  content: "\e91e";
+}
+.nkp-icon-my-profile:before {
+  content: "\e91f";
+}
+.nkp-icon-my-tasks:before {
+  content: "\e920";
+}
+.nkp-icon-oauth:before {
+  content: "\e921";
+}
+.nkp-icon-pdf:before {
+  content: "\e922";
+}
+.nkp-icon-plus:before {
+  content: "\e923";
+}
+.nkp-icon-process-handling-category:before {
+  content: "\e924";
+}
+.nkp-icon-process-handling-matrix:before {
+  content: "\e925";
+}
+.nkp-icon-process-model:before {
+  content: "\e926";
+}
+.nkp-icon-process-states:before {
+  content: "\e927";
+}
+.nkp-icon-process-transitions:before {
+  content: "\e928";
+}
+.nkp-icon-process-types:before {
+  content: "\e929";
+}
+.nkp-icon-refresh:before {
+  content: "\e92a";
+}
+.nkp-icon-security-person:before {
+  content: "\e92b";
+}
+.nkp-icon-security-rights-category:before {
+  content: "\e92c";
+}
+.nkp-icon-security-view-rights:before {
+  content: "\e92d";
+}
+.nkp-icon-tag-label:before {
+  content: "\e92e";
+}
+.nkp-icon-users:before {
+  content: "\e92f";
+}
+.nkp-icon-view-list:before {
+  content: "\e930";
+}
+.nkp-media_icon-help:before {
+  content: "\e931";
+}
+.nkp-media-icon-highlight:before {
+  content: "\e932";
+}
+.nkp-media-icon-history:before {
+  content: "\e933";
+}
+.nkp-media-icon-home:before {
+  content: "\e934";
+}
+.nkp-media-icon-popular:before {
+  content: "\e935";
+}
+.nkp-media-icon-settings:before {
+  content: "\e936";
+}

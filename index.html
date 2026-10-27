@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matematika 9. – Geometria, sokszögek</title>
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --panel: #ffffff;
+    --ink: #1d2433;
+    --muted: #68718a;
+    --line: #e3e0d8;
+    --accent: #2f5fd0;
+    --accent-soft: #e6edfb;
+    --sidebar-w: 320px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171f;
+      --panel: #1c212c;
+      --ink: #e8ebf3;
+      --muted: #9aa3b8;
+      --line: #2c3342;
+      --accent: #7ea2ff;
+      --accent-soft: #26304a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+  }
+
+  /* ---- oldalsáv ---- */
+  #sidebar {
+    width: var(--sidebar-w);
+    flex: none;
+    background: var(--panel);
+    border-right: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .brand { padding: 22px 22px 16px; border-bottom: 1px solid var(--line); }
+  .brand small { display: block; color: var(--muted); font-size: 13px; letter-spacing: .02em; }
+  .brand h1 { margin: 4px 0 0; font-size: 20px; line-height: 1.25; }
+  nav { overflow-y: auto; padding: 8px 12px 24px; flex: 1; }
+  .group {
+    margin: 18px 10px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+  }
+  nav a {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  nav a:hover { background: var(--accent-soft); }
+  nav a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  nav a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  nav a .n { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 1.4em; }
+  nav a.active .n { color: var(--accent); }
+
+  /* ---- fő rész ---- */
+  main { flex: 1; min-width: 0; display: flex; flex-direction: column; height: 100%; }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar .title { flex: 1; min-width: 0; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  button {
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  button:disabled { opacity: .4; cursor: default; }
+  #menu { display: none; }
+  iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+
+  /* ---- telefon / keskeny ablak ---- */
+  @media (max-width: 820px) {
+    #sidebar {
+      position: fixed; z-index: 10; inset: 0 auto 0 0;
+      width: min(86vw, 340px);
+      transform: translateX(-100%);
+      transition: transform .2s ease;
+    }
+    body.open #sidebar { transform: none; box-shadow: 0 0 40px rgba(0,0,0,.35); }
+    #menu { display: inline-block; }
+    .bar { padding: 10px 12px; }
+    .bar .lbl { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { #sidebar { transition: none; } }
+</style>
+</head>
+<body>
+
+<aside id="sidebar">
+  <div class="brand">
+    <small>Matematika 9. (B) · II. fejezet</small>
+    <h1>Geometria – sokszögek</h1>
+  </div>
+  <nav id="list" aria-label="Fejezetek"></nav>
+</aside>
+
+<main>
+  <div class="bar">
+    <button id="menu" aria-label="Fejezetek megnyitása">☰ Fejezetek</button>
+    <div class="title" id="title"></div>
+    <button id="prev"><span aria-hidden="true">←</span> <span class="lbl">Előző</span></button>
+    <button id="next"><span class="lbl">Következő</span> <span aria-hidden="true">→</span></button>
+  </div>
+  <iframe id="frame" title="Tankönyvi fejezet"></iframe>
+</main>
+
+<script>
+(function () {
+  // A fejezetek sorrendje. Új fejezet: tedd be ide + a fájlt a tartozekok/fejezetek mappába.
+  var CHAPTERS = [
+    { slug: "01-fejezetnyito",              title: "Fejezetnyitó",                                       group: "Bevezető" },
+    { slug: "02-beszedes-abrak",            title: "Beszédes ábrák",                                     group: "Bevezető" },
+    { slug: "03-geometriai-szerkesztesek",  title: "A geometriai szerkesztésekről",                      group: "Olvasmány · emelt szint" },
+    { slug: "04-11-alapszerkesztesek",      title: "11. Alapszerkesztések",                              group: "Leckék" },
+    { slug: "05-12-13-haromszogek",         title: "12–13. A háromszögekre vonatkozó ismeretek",         group: "Leckék" },
+    { slug: "06-14-15-pitagorasz",          title: "14–15. A Pitagorasz-tétel",                          group: "Leckék" },
+    { slug: "07-16-17-nevezetes-pontok",    title: "16–17. A háromszögek nevezetes pontjai, vonalai",    group: "Leckék" },
+    { slug: "08-erinto-korok",              title: "A háromszög oldalait érintő körök",                  group: "Olvasmány · emelt szint" },
+    { slug: "09-19-sokszogek",              title: "19. A sokszögekről",                                 group: "Leckék" },
+    { slug: "10-fejezetzaro",               title: "Fejezetzáró",                                        group: "Lezárás" }
+  ];
+
+  var frame = document.getElementById("frame");
+  var list = document.getElementById("list");
+  var titleEl = document.getElementById("title");
+  var prevBtn = document.getElementById("prev");
+  var nextBtn = document.getElementById("next");
+  var current = -1;
+
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; }
+
+  // oldalsáv felépítése
+  var lastGroup = null;
+  CHAPTERS.forEach(function (c, i) {
+    if (c.group !== lastGroup) {
+      var g = document.createElement("div");
+      g.className = "group";
+      g.textContent = c.group;
+      list.appendChild(g);
+      lastGroup = c.group;
+    }
+    var a = document.createElement("a");
+    a.href = "#" + c.slug;
+    a.dataset.i = i;
+    a.innerHTML = '<span class="n">' + (i + 1) + '.</span><span></span>';
+    a.lastChild.textContent = c.title;
+    list.appendChild(a);
+  });
+  var links = list.querySelectorAll("a");
+
+  function highlight(i) {
+    current = i;
+    links.forEach(function (a, n) {
+      if (n === i) { a.classList.add("active"); a.setAttribute("aria-current", "page"); }
+      else { a.classList.remove("active"); a.removeAttribute("aria-current"); }
+    });
+    titleEl.textContent = CHAPTERS[i].title;
+    document.title = CHAPTERS[i].title + " – Matematika 9.";
+    prevBtn.disabled = i === 0;
+    nextBtn.disabled = i === CHAPTERS.length - 1;
+    store("manka-utolso", CHAPTERS[i].slug);
+    if (location.hash !== "#" + CHAPTERS[i].slug) history.replaceState(null, "", "#" + CHAPTERS[i].slug);
+  }
+
+  function indexOfSlug(s) {
+    for (var i = 0; i < CHAPTERS.length; i++) if (CHAPTERS[i].slug === s) return i;
+    return -1;
+  }
+
+  function open(i) {
+    if (i < 0 || i >= CHAPTERS.length) return;
+    frame.src = "tartozekok/fejezetek/" + CHAPTERS[i].slug + ".html";
+    highlight(i);
+    document.body.classList.remove("open");
+  }
+
+  list.addEventListener("click", function (e) {
+    var a = e.target.closest("a");
+    if (!a) return;
+    e.preventDefault();
+    open(+a.dataset.i);
+  });
+  prevBtn.onclick = function () { open(current - 1); };
+  nextBtn.onclick = function () { open(current + 1); };
+  document.getElementById("menu").onclick = function () { document.body.classList.toggle("open"); };
+
+  // a fejezet oldal jelzi, melyik van betöltve (pl. ha belső linkre kattintottak)
+  window.addEventListener("message", function (e) {
+    var s = e.data && e.data.manka;
+    var i = s ? indexOfSlug(s) : -1;
+    if (i >= 0 && i !== current) highlight(i);
+  });
+
+  // kezdő fejezet: link hash → utoljára nyitott → első
+  var start = indexOfSlug(location.hash.slice(1));
+  if (start < 0) start = indexOfSlug(store("manka-utolso"));
+  if (start < 0) start = 0;
+  open(start);
+})();
+</script>
+</body>
+</html>
